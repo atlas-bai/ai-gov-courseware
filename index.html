@@ -1,0 +1,4552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人工智能在政务数据开发利用中的应用 — 遵义市大数据发展管理局</title>
+<meta name="description" content="人工智能在政务数据开发利用中的应用专题课件 — 遵义市大数据发展管理局">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+/* ========================
+   CSS Custom Properties
+   ======================== */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fb;
+  --bg-card: #ffffff;
+  --bg-card-alt: #f0f4fa;
+  --bg-hero: linear-gradient(135deg, #1a3a6c 0%, #2563eb 50%, #1a3a6c 100%);
+  --bg-section-header: linear-gradient(135deg, #1e40af, #3b82f6);
+
+  --accent-blue: #2563eb;
+  --accent-blue-light: #3b82f6;
+  --accent-blue-dark: #1e40af;
+  --accent-cyan: #0ea5e9;
+  --accent-gradient: linear-gradient(135deg, #2563eb, #0ea5e9);
+
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --text-white: #ffffff;
+
+  --border-light: #e2e8f0;
+  --border-blue: rgba(37, 99, 235, 0.2);
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-blue: 0 4px 16px rgba(37, 99, 235, 0.15);
+
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  --sidebar-w: 200px;
+  --header-h: 52px;
+}
+
+/* ========================
+   Reset & Base
+   ======================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 17px; }
+
+body {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+
+/* ========================
+   Progress Bar
+   ======================== */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--accent-gradient);
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
+/* ========================
+   Header
+   ======================== */
+#site-header {
+  position: fixed;
+  top: 3px;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 12px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.header-logo svg { flex-shrink: 0; }
+
+.header-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-blue-dark);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.header-spacer { flex: 1; }
+
+#hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text-primary);
+  border-radius: 6px;
+}
+
+#hamburger-btn:hover { background: var(--bg-secondary); }
+
+/* ========================
+   Layout: Sidebar + Content
+   ======================== */
+#layout {
+  display: flex;
+  padding-top: calc(var(--header-h) + 3px);
+  min-height: 100vh;
+}
+
+/* ========================
+   Sidebar
+   ======================== */
+#sidebar {
+  position: fixed;
+  top: calc(var(--header-h) + 3px);
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border-light);
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 800;
+  transition: transform 0.3s ease;
+}
+
+#sidebar::-webkit-scrollbar { width: 4px; }
+#sidebar::-webkit-scrollbar-track { background: transparent; }
+#sidebar::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+
+.sidebar-inner { padding: 12px 0; }
+
+.sidebar-progress {
+  padding: 8px 12px;
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 8px;
+}
+
+.sidebar-progress-bar {
+  flex: 1;
+  height: 3px;
+  background: var(--border-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sidebar-progress-fill {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.sidebar-part {
+  margin-bottom: 2px;
+}
+
+.sidebar-part-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-blue-dark);
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0;
+  transition: background 0.15s;
+}
+
+.sidebar-part-header:hover { background: var(--bg-secondary); }
+
+.sidebar-part-badge {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar-part-title { flex: 1; line-height: 1.3; }
+
+.sidebar-chevron {
+  font-size: 10px;
+  transition: transform 0.2s;
+  color: var(--text-muted);
+}
+
+.sidebar-part.collapsed .sidebar-chevron { transform: rotate(-90deg); }
+.sidebar-part.collapsed .sidebar-items { display: none; }
+
+.sidebar-items { padding-bottom: 4px; }
+
+.sidebar-item {
+  display: block;
+  padding: 4px 12px 4px 32px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  line-height: 1.4;
+  transition: all 0.15s;
+  border-left: 2px solid transparent;
+  margin-left: 0;
+}
+
+.sidebar-item:hover {
+  background: var(--bg-secondary);
+  color: var(--accent-blue);
+}
+
+.sidebar-item.active {
+  background: rgba(37,99,235,0.08);
+  color: var(--accent-blue);
+  border-left-color: var(--accent-blue);
+  font-weight: 600;
+}
+
+/* ========================
+   Main Content
+   ======================== */
+#main-content {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  min-width: 0;
+}
+
+/* ========================
+   Hero
+   ======================== */
+#hero {
+  position: relative;
+  background: var(--bg-hero);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px 24px 40px;
+}
+
+#hero-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1100px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 8px 22px;
+  font-size: 18px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 28px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.5rem, 3vw, 1.95rem);
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.hero-date {
+  font-size: 20px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 40px;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hero-stat {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 16px 24px;
+  min-width: 120px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.hero-stat-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.hero-stat-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.4;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ========================
+   Page Sections
+   ======================== */
+.page-section { padding: 48px 32px; }
+.page-section:nth-child(even) { background: var(--bg-secondary); }
+
+.section-max { max-width: 1100px; margin: 0 auto; }
+
+/* Part Header */
+.part-header {
+  background: var(--bg-section-header);
+  padding: 20px 32px;
+  margin-bottom: 0;
+}
+
+.part-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.part-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.4);
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.part-header-text { color: white; }
+
+.part-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.part-meta {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+/* Section Header (sub) */
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.section-num-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.section-title-wrap h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.3;
+  border-left: 4px solid var(--accent-blue);
+  padding-left: 12px;
+}
+
+.section-title-wrap .section-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  padding-left: 16px;
+}
+
+/* ========================
+   Cards
+   ======================== */
+.cards-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.cards-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.cards-grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.cards-grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-blue);
+  transform: translateY(-2px);
+}
+
+.card-accent-top {
+  border-top: 3px solid var(--accent-blue);
+}
+
+.card-accent-left {
+  border-left: 4px solid var(--accent-blue);
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(14,165,233,0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-body {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.card-body ul { padding-left: 16px; }
+.card-body ul li { margin-bottom: 4px; }
+
+/* Stat card */
+.stat-card {
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 20px 16px;
+}
+
+.stat-num {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: var(--accent-blue);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Quote box */
+.quote-box {
+  background: linear-gradient(135deg, rgba(37,99,235,0.06), rgba(14,165,233,0.04));
+  border-left: 4px solid var(--accent-blue);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+.quote-box p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.quote-box strong { color: var(--accent-blue-dark); font-style: normal; }
+
+/* Info box */
+.info-box {
+  background: rgba(37,99,235,0.05);
+  border: 1px solid var(--border-blue);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 12px 0;
+}
+
+.info-box-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-box p, .info-box ul {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.info-box ul { padding-left: 16px; }
+
+/* Badge/pill */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.badge-blue { background: rgba(37,99,235,0.1); color: var(--accent-blue-dark); }
+.badge-green { background: rgba(16,185,129,0.1); color: #059669; }
+.badge-orange { background: rgba(245,158,11,0.1); color: #d97706; }
+.badge-red { background: rgba(239,68,68,0.1); color: #dc2626; }
+.badge-cyan { background: rgba(14,165,233,0.1); color: #0284c7; }
+
+.badges-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+
+/* ========================
+   Timeline
+   ======================== */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-blue), var(--accent-cyan));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s;
+}
+
+.timeline-item:hover { box-shadow: var(--shadow-blue); }
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+.timeline-item.milestone::before { background: var(--warning); box-shadow: 0 0 0 2px var(--warning); }
+
+.timeline-year {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 2px;
+}
+
+.timeline-event {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ========================
+   AI History - Era Timeline
+   ======================== */
+.ai-power-curve {
+  margin-bottom: 28px;
+}
+.ai-power-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.ai-power-bar {
+  position: relative;
+  height: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  overflow: visible;
+  padding: 4px;
+}
+.ai-power-fill {
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #93c5fd 0%, #3b82f6 25%, #f59e0b 55%, #ef4444 80%, #dc2626 100%);
+  width: 15%;
+  transition: width 1.5s cubic-bezier(0.22,1,0.36,1);
+}
+.ai-power-markers {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 6px;
+}
+.ai-power-marker {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Era Navigation */
+.era-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  margin-top: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+}
+.era-nav-btn {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 12px;
+  background: var(--bg-card);
+  border: 2px solid var(--border-light);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.era-nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-blue);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.era-nav-btn:hover { border-color: var(--accent-blue); box-shadow: var(--shadow-blue); }
+.era-nav-btn.active { border-color: var(--accent-blue); background: rgba(59,130,246,0.06); }
+.era-nav-btn.active::after { transform: scaleX(1); }
+.era-nav-icon { font-size: 24px; }
+.era-nav-text { font-size: 14px; font-weight: 700; color: var(--text-primary); }
+.era-nav-years { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+
+/* Era Panels */
+.era-panels { position: relative; }
+.era-panel {
+  display: none;
+  animation: eraFadeIn 0.5s ease;
+}
+.era-panel.active { display: block; }
+@keyframes eraFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Era Header */
+.era-header {
+  background: var(--era-bg);
+  border: 2px solid color-mix(in srgb, var(--era-color) 30%, transparent);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.era-header::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--era-color) 8%, transparent);
+}
+.era-big-year {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--era-color);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.era-headline {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.era-metaphor {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border-radius: 10px;
+  border-left: 3px solid var(--era-color);
+}
+
+/* Era Event Cards */
+.era-events {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+.era-event-card {
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.era-event-card:hover {
+  box-shadow: var(--shadow-blue);
+  transform: translateY(-2px);
+}
+.era-event-card.era-event-milestone {
+  border-left: 4px solid var(--accent-blue);
+}
+.era-event-card.era-event-cold {
+  border-left: 4px solid #94a3b8;
+  background: linear-gradient(135deg, var(--bg-card), rgba(148,163,184,0.05));
+}
+.era-event-card.era-event-highlight {
+  border-left-color: #ef4444;
+  background: linear-gradient(135deg, var(--bg-card), rgba(239,68,68,0.04));
+  box-shadow: 0 0 0 1px rgba(239,68,68,0.15), var(--shadow-sm);
+}
+.era-event-year {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 4px;
+}
+.era-event-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.era-event-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.era-event-impact {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--warning);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Era Insight Box */
+.era-insight {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-top: 18px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(6,182,212,0.06));
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 12px;
+}
+.era-insight-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.era-insight-text {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* ========================
+   Pillar Cards (expandable)
+   ======================== */
+.pillar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 12px;
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.pillar-header:hover { background: var(--bg-secondary); }
+
+.pillar-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.pillar-icon-compute { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+.pillar-icon-algo { background: linear-gradient(135deg, #d1fae5, #a7f3d0); }
+.pillar-icon-data { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+
+.pillar-info { flex: 1; }
+
+.pillar-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.pillar-analogy {
+  font-size: 13px;
+  color: var(--accent-blue);
+  font-weight: 500;
+}
+
+.pillar-chevron {
+  font-size: 12px;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+
+.pillar-card.open .pillar-chevron { transform: rotate(180deg); }
+
+.pillar-body {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+}
+
+.pillar-card.open .pillar-body {
+  max-height: 3000px;
+  padding: 0 20px 20px;
+}
+
+.pillar-body-inner {
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
+}
+
+/* ========================
+   Tab interface
+   ======================== */
+.tab-nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--border-light);
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  padding: 10px 18px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.tab-btn:hover { color: var(--accent-blue); }
+
+.tab-btn.active {
+  color: var(--accent-blue);
+  border-bottom-color: var(--accent-blue);
+}
+
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+/* ========================
+   Table
+   ======================== */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.data-table th {
+  background: var(--bg-section-header);
+  color: white;
+  font-weight: 700;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.data-table td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+
+.data-table tr:hover td { background: rgba(37,99,235,0.03); }
+
+.data-table td:first-child { font-weight: 600; color: var(--text-primary); }
+
+/* ========================
+   AI Model Cards
+   ======================== */
+.model-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.filter-btn:hover { background: rgba(37,99,235,0.08); color: var(--accent-blue); }
+
+.filter-btn.active {
+  background: var(--accent-blue);
+  color: white;
+  border-color: var(--accent-blue);
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.model-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.model-card:hover {
+  box-shadow: var(--shadow-blue);
+  transform: translateY(-2px);
+}
+
+.model-card[data-hidden="true"] { display: none; }
+
+.model-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.model-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: var(--bg-secondary);
+  flex-shrink: 0;
+  font-weight: 900;
+}
+
+.model-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.model-company {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.model-features {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.model-features ul { padding-left: 14px; }
+.model-features ul li { margin-bottom: 2px; }
+
+/* ========================
+   Comparison flow
+   ======================== */
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 28px;
+}
+
+.flow-steps::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: var(--border-blue);
+}
+
+.flow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  position: relative;
+}
+
+.flow-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: -28px;
+  position: relative;
+  z-index: 1;
+}
+
+.flow-step-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding-top: 1px;
+}
+
+/* ========================
+   Case cards (遵义)
+   ======================== */
+.case-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.case-card:hover {
+  box-shadow: var(--shadow-blue);
+  transform: translateY(-2px);
+}
+
+.case-card-header {
+  background: var(--bg-section-header);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.case-card-icon {
+  font-size: 22px;
+}
+
+.case-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.3;
+}
+
+.case-card-body {
+  padding: 16px 18px;
+}
+
+.case-card-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.case-card-significance {
+  font-size: 13px;
+  color: var(--accent-blue-dark);
+  font-weight: 600;
+  background: rgba(37,99,235,0.06);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.case-card-img-wrap {
+  margin: 14px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.case-card-img-wrap img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: block;
+}
+
+/* Portrait images: limit width so they don't dominate */
+.case-card-img-wrap.portrait img {
+  max-width: 380px;
+  width: 100%;
+}
+
+/* Landscape images: fill available width */
+.case-card-img-wrap.landscape img {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .case-card-img-wrap.portrait img { max-width: 280px; }
+}
+
+/* ========================
+   4V Grid
+   ======================== */
+.fourv-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 22px;
+  border-top: 4px solid var(--accent-blue);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.fourv-card:hover { box-shadow: var(--shadow-blue); transform: translateY(-2px); }
+
+.fourv-letter {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--accent-blue);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.fourv-word {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.fourv-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ========================
+   Goal Table (贵州)
+   ======================== */
+.goal-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 16px;
+}
+
+/* ========================
+   Trend Cards
+   ======================== */
+.trend-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.trend-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trend-content { flex: 1; }
+
+.trend-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.trend-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ========================
+   Domain Header
+   ======================== */
+.domain-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.domain-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--accent-gradient);
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.domain-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* ========================
+   Recommendation cards
+   ======================== */
+.rec-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.rec-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rec-text { font-size: 15px; color: var(--text-primary); line-height: 1.7; }
+.rec-text strong { color: var(--accent-blue-dark); }
+
+/* ========================
+   Closing quote
+   ======================== */
+.closing-quote {
+  background: var(--bg-section-header);
+  border-radius: 14px;
+  padding: 28px 32px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.closing-quote p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: white;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* ========================
+   Footer
+   ======================== */
+#site-footer {
+  background: #1a202c;
+  color: rgba(255,255,255,0.6);
+  padding: 28px 32px;
+  text-align: center;
+  font-size: 13px;
+}
+
+#site-footer a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+#site-footer a:hover { text-decoration: underline; }
+
+.footer-logo {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+
+/* ========================
+   Scroll Animations
+   ======================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================
+   Responsive
+   ======================== */
+@media (max-width: 768px) {
+  :root { --sidebar-w: 0px; }
+
+  #sidebar {
+    transform: translateX(-100%);
+    width: 240px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  #sidebar.open {
+    transform: translateX(0);
+    --sidebar-w: 240px;
+  }
+
+  #hamburger-btn { display: flex; }
+
+  #main-content { margin-left: 0; }
+
+  .page-section { padding: 32px 16px; }
+  .part-header { padding: 16px 16px; }
+
+  #hero { padding: 80px 16px 48px; }
+
+  .hero-stats { gap: 10px; }
+  .hero-stat { padding: 12px 14px; min-width: 100px; }
+  .hero-stat-num { font-size: 1.5rem; }
+
+  .timeline { padding-left: 24px; }
+  .timeline-item::before { left: -19px; }
+
+  /* Era Timeline Mobile */
+  .era-nav { flex-wrap: nowrap; gap: 6px; }
+  .era-nav-btn { min-width: 100px; padding: 10px 8px; }
+  .era-nav-icon { font-size: 20px; }
+  .era-nav-text { font-size: 12px; }
+  .era-nav-years { font-size: 10px; }
+  .era-big-year { font-size: 1.6rem; }
+  .era-header { padding: 18px 16px; }
+  .era-event-card { padding: 14px 16px; }
+  .era-event-title { font-size: 15px; }
+
+  .model-grid { grid-template-columns: 1fr 1fr; }
+
+  .data-table { font-size: 13px; }
+  .data-table th, .data-table td { padding: 8px 10px; }
+}
+
+@media (max-width: 480px) {
+  .model-grid { grid-template-columns: 1fr; }
+  .cards-grid-2, .cards-grid-3, .cards-grid-4 { grid-template-columns: 1fr; }
+}
+
+/* Sidebar overlay for mobile */
+#sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 799;
+}
+
+#sidebar-overlay.visible { display: block; }
+</style>
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div id="progress-bar"></div>
+
+<!-- Header -->
+<header id="site-header">
+  <button id="hamburger-btn" aria-label="打开导航" onclick="toggleSidebar()">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="3" y1="5" x2="17" y2="5"/>
+      <line x1="3" y1="10" x2="17" y2="10"/>
+      <line x1="3" y1="15" x2="17" y2="15"/>
+    </svg>
+  </button>
+  <a class="header-logo" href="#hero">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-label="课件Logo">
+      <rect width="28" height="28" rx="7" fill="#2563eb"/>
+      <circle cx="14" cy="11" r="4" fill="white" opacity="0.9"/>
+      <path d="M6 22c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="white" stroke-width="1.5" fill="none" opacity="0.7"/>
+      <path d="M14 7l1.5 2.5L18 10l-2 2 .5 2.5L14 13l-2.5 1.5.5-2.5-2-2 2.5-.5z" fill="#f59e0b" opacity="0.9"/>
+    </svg>
+    <div>
+      <div class="header-title">人工智能在政务数据开发利用中的应用</div>
+      <div class="header-sub">遵义市大数据发展管理局 · 李远</div>
+    </div>
+  </a>
+  <div class="header-spacer"></div>
+</header>
+
+<!-- Sidebar Overlay -->
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<!-- Main Layout -->
+<div id="layout">
+
+  <!-- Sidebar -->
+  <nav id="sidebar" aria-label="课程导航">
+    <div class="sidebar-inner">
+      <div class="sidebar-progress">
+        <span>进度</span>
+        <div class="sidebar-progress-bar"><div class="sidebar-progress-fill" id="sidebar-prog"></div></div>
+        <span id="sidebar-prog-text">0%</span>
+      </div>
+
+      <div class="sidebar-part" id="nav-p0">
+        <div class="sidebar-part-header" onclick="toggleNav('nav-p0')">
+          <div class="sidebar-part-badge" style="background:#3b82f6">★</div>
+          <span class="sidebar-part-title">封面 / 概述</span>
+          <span class="sidebar-chevron">▼</span>
+        </div>
+        <div class="sidebar-items">
+          <a href="#hero" class="sidebar-item">课件封面</a>
+          <a href="#overview" class="sidebar-item">课程概览</a>
+        </div>
+      </div>
+
+      <div class="sidebar-part" id="nav-p1">
+        <div class="sidebar-part-header" onclick="toggleNav('nav-p1')">
+          <div class="sidebar-part-badge">1</div>
+          <span class="sidebar-part-title">认识人工智能</span>
+          <span class="sidebar-chevron">▼</span>
+        </div>
+        <div class="sidebar-items">
+          <a href="#s11" class="sidebar-item">1.1 什么是人工智能</a>
+          <a href="#s12" class="sidebar-item">1.2 AI发展历史</a>
+          <a href="#s13" class="sidebar-item">1.3 AI三大基石</a>
+          <a href="#s14" class="sidebar-item">1.4 AI对社会的影响</a>
+        </div>
+      </div>
+
+      <div class="sidebar-part" id="nav-p2">
+        <div class="sidebar-part-header" onclick="toggleNav('nav-p2')">
+          <div class="sidebar-part-badge">2</div>
+          <span class="sidebar-part-title">大数据与政务数据</span>
+          <span class="sidebar-chevron">▼</span>
+        </div>
+        <div class="sidebar-items">
+          <a href="#s21" class="sidebar-item">2.1 大数据核心概念</a>
+          <a href="#s22" class="sidebar-item">2.2 政务大数据</a>
+          <a href="#s23" class="sidebar-item">2.3 共享开放授权</a>
+          <a href="#s24" class="sidebar-item">2.4 可信数据空间</a>
+          <a href="#s25" class="sidebar-item">2.5 遵义市实践</a>
+          <a href="#music-break" class="sidebar-item" style="color:#e11d48">🎵 课间休息</a>
+        </div>
+      </div>
+
+      <div class="sidebar-part" id="nav-p3">
+        <div class="sidebar-part-header" onclick="toggleNav('nav-p3')">
+          <div class="sidebar-part-badge">3</div>
+          <span class="sidebar-part-title">全球AI大模型</span>
+          <span class="sidebar-chevron">▼</span>
+        </div>
+        <div class="sidebar-items">
+          <a href="#s31" class="sidebar-item">3.1 什么是大模型</a>
+          <a href="#s32" class="sidebar-item">3.2 产品分类</a>
+          <a href="#s32b" class="sidebar-item" style="color:#f59e0b">AI 应用示例</a>
+          <a href="#s33" class="sidebar-item">3.3 DeepSeek专题</a>
+          <a href="#s34" class="sidebar-item">3.4 发展趋势</a>
+          <a href="#s35" class="sidebar-item">3.5 训练与优化</a>
+        </div>
+      </div>
+
+      <div class="sidebar-part" id="nav-p4">
+        <div class="sidebar-part-header" onclick="toggleNav('nav-p4')">
+          <div class="sidebar-part-badge">4</div>
+          <span class="sidebar-part-title">政务大模型案例</span>
+          <span class="sidebar-chevron">▼</span>
+        </div>
+        <div class="sidebar-items">
+          <a href="#s41" class="sidebar-item">4.1 全国概况</a>
+          <a href="#s42" class="sidebar-item">4.2 全国标杆</a>
+          <a href="#s43" class="sidebar-item">4.3 贵州省案例</a>
+          <a href="#s44" class="sidebar-item">4.4 遵义市实例</a>
+          <a href="#s45" class="sidebar-item">4.5 展望与思考</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
+    <section id="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-inner">
+
+        <h1 class="hero-title">人工智能在政务数据<br>开发利用中的应用</h1>
+        <p class="hero-subtitle">遵义市大数据发展管理局 · 李远</p>
+
+      </div>
+      <div class="hero-scroll">
+        <span>向下滚动</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12L2 6h12z"/></svg>
+      </div>
+    </section>
+
+    <!-- ==================== OVERVIEW ==================== -->
+    <section id="overview" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">★</div>
+          <div class="section-title-wrap">
+            <h2>课程概览</h2>
+            <p class="section-desc">本课件共四大部分，系统介绍AI在政务领域的理论基础与实践应用</p>
+          </div>
+        </div>
+        <div class="cards-grid cards-grid-4 fade-in">
+          <div class="card card-accent-top">
+            <div class="card-icon">🧠</div>
+            <div class="card-title">第一部分</div>
+            <div class="card-subtitle">认识人工智能（约35分钟）</div>
+            <div class="card-body">AI基本概念、发展历史17个里程碑、三大基石、对社会影响的系统讲解</div>
+          </div>
+          <div class="card card-accent-top">
+            <div class="card-icon">📊</div>
+            <div class="card-title">第二部分</div>
+            <div class="card-subtitle">大数据与政务数据（约40分钟）</div>
+            <div class="card-body">4V核心概念、政务大数据分类、共享开放授权运营三种模式、可信数据空间</div>
+          </div>
+          <div class="card card-accent-top">
+            <div class="card-icon">🤖</div>
+            <div class="card-title">第三部分</div>
+            <div class="card-subtitle">全球AI大模型产品（约30分钟）</div>
+            <div class="card-body">大模型定义、14款主流产品、AI应用示例、DeepSeek专题、发展趋势、训练与优化技术</div>
+          </div>
+          <div class="card card-accent-top">
+            <div class="card-icon">🏛️</div>
+            <div class="card-title">第四部分</div>
+            <div class="card-subtitle">政务大模型经典案例（约45分钟）</div>
+            <div class="card-body">全国14个标杆案例、贵州省案例、遵义市8个实例详解、展望建议</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PART 1 HEADER ==================== -->
+    <div class="part-header" id="part1">
+      <div class="part-header-inner">
+        <div class="part-num">1</div>
+        <div class="part-header-text">
+          <div class="part-title">认识人工智能</div>
+          <div class="part-meta">第一部分 · 约35分钟 · AI基础概念与历史演进</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1.1 什么是AI -->
+    <section id="s11" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">1.1</div>
+          <div class="section-title-wrap">
+            <h2>什么是人工智能</h2>
+            <p class="section-desc">核心比喻：AI就像给电脑装上了一个"大脑"</p>
+          </div>
+        </div>
+
+        <div class="fade-in" style="margin-bottom:20px">
+          <div class="case-card-img-wrap landscape" style="margin:0 auto;max-width:800px"><img src="assets/cases/ai-concept.png" alt="人工智能概念图" style="width:100%;height:auto;border-radius:12px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)"></div>
+        </div>
+
+        <div class="quote-box fade-in">
+          <p>人工智能（Artificial Intelligence）是研究、开发用于<strong>模拟、延伸和扩展人类智能</strong>的理论、方法、技术及应用系统的技术科学。简单来说：AI就是让机器能够像人一样"思考"和"行动"。</p>
+        </div>
+
+        <div class="cards-grid cards-grid-3 fade-in" style="margin-top:20px">
+          <!-- 机器学习 -->
+          <div class="card card-accent-top">
+            <div class="card-icon">🎓</div>
+            <div class="card-title">机器学习</div>
+            <div class="card-subtitle">让机器自己学会规律</div>
+            <div class="card-body">
+              <div class="info-box" style="margin-bottom:10px">
+                <div class="info-box-title">💡 通俗比喻</div>
+                <p>就像教小孩认字：先看大量例子，然后自己总结规律。机器不需要人逐条编写规则，而是从数据中自动学习。</p>
+              </div>
+              <ul>
+                <li><strong>监督学习</strong>：有老师指导，给机器标好答案的数据去学</li>
+                <li><strong>无监督学习</strong>：自己摸索，机器从数据中自己发现规律</li>
+                <li><strong>强化学习</strong>：试错学习，像下棋——赢了奖励、输了惩罚</li>
+              </ul>
+              <div class="badges-row">
+                <span class="badge badge-blue">垃圾邮件过滤</span>
+                <span class="badge badge-blue">信用评分</span>
+                <span class="badge badge-blue">商品推荐</span>
+              </div>
+            </div>
+          </div>
+          <!-- 深度学习 -->
+          <div class="card card-accent-top">
+            <div class="card-icon">🧬</div>
+            <div class="card-title">深度学习</div>
+            <div class="card-subtitle">模仿人脑的神经网络</div>
+            <div class="card-body">
+              <div class="info-box" style="margin-bottom:10px">
+                <div class="info-box-title">💡 通俗比喻</div>
+                <p>如果机器学习是"看书学习"，深度学习就是"在脑子里建了一个微型大脑"。为什么叫"深"？因为网络有很多层，每层学不同特征。</p>
+              </div>
+              <p style="font-size:14px;color:var(--text-secondary);line-height:1.8">看猫的照片：</p>
+              <ul>
+                <li>第一层识别边缘</li>
+                <li>第二层识别形状</li>
+                <li>第三层识别耳朵和尾巴</li>
+                <li>最终判断：这是猫 🐱</li>
+              </ul>
+              <div class="badges-row">
+                <span class="badge badge-cyan">人脸识别</span>
+                <span class="badge badge-cyan">自动驾驶</span>
+                <span class="badge badge-cyan">医学影像</span>
+              </div>
+            </div>
+          </div>
+          <!-- NLP -->
+          <div class="card card-accent-top">
+            <div class="card-icon">💬</div>
+            <div class="card-title">自然语言处理（NLP）</div>
+            <div class="card-subtitle">让机器听懂人话</div>
+            <div class="card-body">
+              <div class="info-box" style="margin-bottom:10px">
+                <div class="info-box-title">💡 通俗比喻</div>
+                <p>NLP就是给机器请了一个"翻译官"，把人类语言翻译成机器能理解的信号。ChatGPT和DeepSeek的核心能力就是NLP。</p>
+              </div>
+              <ul>
+                <li><strong>分词</strong>：将语句拆解成最小语义单元</li>
+                <li><strong>语义理解</strong>：理解句子含义与意图</li>
+                <li><strong>情感分析</strong>：判断文本正面/负面情绪</li>
+                <li><strong>文本生成</strong>：像人类一样写出流畅文字</li>
+              </ul>
+              <div class="badges-row">
+                <span class="badge badge-green">智能客服</span>
+                <span class="badge badge-green">机器翻译</span>
+                <span class="badge badge-green">政策解读</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box fade-in" style="margin-top:20px">
+          <div class="info-box-title">🤔 互动提问：你今天用过AI吗？</div>
+          <ul>
+            <li>📱 手机解锁（人脸识别）— 深度学习</li>
+            <li>🗺️ 导航软件路径规划 — 机器学习</li>
+            <li>🛒 购物推荐算法 — 协同过滤+机器学习</li>
+            <li>🎵 短视频内容推送 — 推荐算法</li>
+            <li>📷 拍照翻译（OCR+翻译）— NLP+计算机视觉</li>
+            <li>🎙️ 语音助手（Siri/小度/天猫精灵）— 语音识别+NLP</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1.2 AI发展历史 -->
+    <section id="s12" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">1.2</div>
+          <div class="section-title-wrap">
+            <h2>AI发展历史</h2>
+            <p class="section-desc">从1950年图灵测试到2026年多模态爆发 — 点击各时代探索里程碑</p>
+          </div>
+        </div>
+
+        <!-- AI能力增长曲线 -->
+        <div class="ai-power-curve fade-in">
+          <div class="ai-power-label">📈 AI能力水平</div>
+          <div class="ai-power-bar">
+            <div class="ai-power-fill" id="aiPowerFill"></div>
+            <div class="ai-power-markers">
+              <span class="ai-power-marker" style="left:5%">萌芽</span>
+              <span class="ai-power-marker" style="left:20%">探索</span>
+              <span class="ai-power-marker" style="left:45%">突破</span>
+              <span class="ai-power-marker" style="left:72%">爆发</span>
+              <span class="ai-power-marker" style="left:92%">奇点</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 时代导航栏 -->
+        <div class="era-nav fade-in">
+          <button class="era-nav-btn active" data-era="era-dawn" onclick="switchEra('era-dawn',this)">
+            <span class="era-nav-icon">🌟</span>
+            <span class="era-nav-text">诞生与萌芽</span>
+            <span class="era-nav-years">1950-1960s</span>
+          </button>
+          <button class="era-nav-btn" data-era="era-winter" onclick="switchEra('era-winter',this)">
+            <span class="era-nav-icon">❄️</span>
+            <span class="era-nav-text">寒冬与坚守</span>
+            <span class="era-nav-years">1970-1990s</span>
+          </button>
+          <button class="era-nav-btn" data-era="era-break" onclick="switchEra('era-break',this)">
+            <span class="era-nav-icon">🚀</span>
+            <span class="era-nav-text">突破与崛起</span>
+            <span class="era-nav-years">1997-2017</span>
+          </button>
+          <button class="era-nav-btn" data-era="era-boom" onclick="switchEra('era-boom',this)">
+            <span class="era-nav-icon">💥</span>
+            <span class="era-nav-text">大爆发时代</span>
+            <span class="era-nav-years">2020-2026</span>
+          </button>
+        </div>
+
+        <!-- 时代内容卡片 -->
+        <div class="era-panels">
+          <!-- 诞生与萌芽 -->
+          <div class="era-panel active" id="era-dawn">
+            <div class="era-header" style="--era-color:#3b82f6;--era-bg:rgba(59,130,246,0.08)">
+              <div class="era-big-year">1950-1960s</div>
+              <div class="era-headline">"人工智能"概念诞生，AI从0到1</div>
+              <div class="era-metaphor">💡 比喻：就像人类第一次学会用火——充满想象力，但还很稚嫩</div>
+            </div>
+            <div class="era-events">
+              <div class="era-event-card">
+                <div class="era-event-year">🎯 1950年</div>
+                <div class="era-event-title">图灵测试提出</div>
+                <div class="era-event-desc">英国数学家图灵发表《计算机器与智能》，提出了判断机器是否有智能的第一把"尺子"——图灵测试。这是AI的思想起源。</div>
+                <div class="era-event-impact">影响力：★★★★★</div>
+              </div>
+              <div class="era-event-card">
+                <div class="era-event-year">🎓 1956年</div>
+                <div class="era-event-title">达特茅斯会议 — AI的"出生证"</div>
+                <div class="era-event-desc">美国达特茅斯学院举行历史性会议，麦卡锡等人首次正式提出"人工智能"概念，AI作为独立学科正式诞生。</div>
+                <div class="era-event-impact">影响力：★★★★★</div>
+              </div>
+              <div class="era-event-card">
+                <div class="era-event-year">💻 1960年代</div>
+                <div class="era-event-title">第一代专家系统</div>
+                <div class="era-event-desc">AI学会了"照本宣科"——专家系统通过人工编写规则来解决特定领域问题，如医疗诊断、化学分析。</div>
+                <div class="era-event-impact">影响力：★★★</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 寒冬与坚守 -->
+          <div class="era-panel" id="era-winter">
+            <div class="era-header" style="--era-color:#64748b;--era-bg:rgba(100,116,139,0.08)">
+              <div class="era-big-year">1970-1990s</div>
+              <div class="era-headline">AI两次跌入低谷，但希望的火苗从未熄灭</div>
+              <div class="era-metaphor">❄️ 比喻：就像种子埋在雪地里——看似没有生命迹象，却在悄悄积蓄力量</div>
+            </div>
+            <div class="era-events">
+              <div class="era-event-card era-event-cold">
+                <div class="era-event-year">❌ 1970年代</div>
+                <div class="era-event-title">第一次AI寒冬</div>
+                <div class="era-event-desc">期望过高、技术不成熟导致资金断裂。AI研究陷入停滞，各国政府大幅削减AI研究经费。</div>
+              </div>
+              <div class="era-event-card">
+                <div class="era-event-year">🔄 1980年代</div>
+                <div class="era-event-title">专家系统商业化 — AI的"第二春"</div>
+                <div class="era-event-desc">专家系统在商业领域大量应用。日本启动"第五代计算机"计划，全球AI研究再次升温。</div>
+              </div>
+              <div class="era-event-card era-event-cold">
+                <div class="era-event-year">❌ 1990年代</div>
+                <div class="era-event-title">第二次AI寒冬</div>
+                <div class="era-event-desc">专家系统维护成本高昂，难以扩展，热潮消退，AI再次进入低谷期。</div>
+              </div>
+            </div>
+            <div class="era-insight">
+              <div class="era-insight-icon">💡</div>
+              <div class="era-insight-text">启示：AI的发展并非一帆风顺，也经历过"过度承诺→失望→重新崛起"的周期。这提醒我们在推进政务AI时，要保持理性期待，稳步前进。</div>
+            </div>
+          </div>
+
+          <!-- 突破与崛起 -->
+          <div class="era-panel" id="era-break">
+            <div class="era-header" style="--era-color:#f59e0b;--era-bg:rgba(245,158,11,0.08)">
+              <div class="era-big-year">1997-2017</div>
+              <div class="era-headline">深度学习开启新纪元，AI一次次"震惊世界"</div>
+              <div class="era-metaphor">🚀 比喻：AI找到了"火箭发动机"——深度学习，开始加速起飞</div>
+            </div>
+            <div class="era-events">
+              <div class="era-event-card era-event-milestone">
+                <div class="era-event-year">♟️ 1997年</div>
+                <div class="era-event-title">深蓝击败国际象棋冠军</div>
+                <div class="era-event-desc">IBM"深蓝"计算机以3.5:2.5的战绩击败国际象棋世界冠军卡斯帕罗夫，AI首次"震惊世界"。</div>
+                <div class="era-event-impact">影响力：★★★★</div>
+              </div>
+              <div class="era-event-card era-event-milestone">
+                <div class="era-event-year">🧠 2006年</div>
+                <div class="era-event-title">Hinton提出深度学习</div>
+                <div class="era-event-desc">Geoffrey Hinton（2024年诺贝尔物理学奖得主）发表论文提出深度学习，AI找到了"开窍"的钥匙，彻底改变了AI发展方向。</div>
+                <div class="era-event-impact">影响力：★★★★★</div>
+              </div>
+              <div class="era-event-card era-event-milestone">
+                <div class="era-event-year">🖼️ 2012年</div>
+                <div class="era-event-title">AlexNet — 深度学习"一战成名"</div>
+                <div class="era-event-desc">AlexNet在ImageNet图像识别大赛中以碾压之势击败传统方法，错误率比第二名低10个百分点以上，深度学习成为主流。</div>
+                <div class="era-event-impact">影响力：★★★★</div>
+              </div>
+              <div class="era-event-card era-event-milestone">
+                <div class="era-event-year">⚫ 2016年</div>
+                <div class="era-event-title">AlphaGo 4:1击败李世石</div>
+                <div class="era-event-desc">Google DeepMind的AlphaGo以4:1击败围棋世界冠军李世石，证明AI能处理极度复杂的策略问题，举世震惊。</div>
+                <div class="era-event-impact">影响力：★★★★★</div>
+              </div>
+              <div class="era-event-card era-event-milestone">
+                <div class="era-event-year">🧩 2017年</div>
+                <div class="era-event-title">Transformer论文发布 — 大模型的基石</div>
+                <div class="era-event-desc">Google发表《Attention is All You Need》，提出Transformer架构，成为ChatGPT、DeepSeek等所有大模型的技术基础。</div>
+                <div class="era-event-impact">影响力：★★★★★</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 大爆发时代 -->
+          <div class="era-panel" id="era-boom">
+            <div class="era-header" style="--era-color:#ef4444;--era-bg:rgba(239,68,68,0.08)">
+              <div class="era-big-year">2020-2026</div>
+              <div class="era-headline">AI井喷式爆发，每半年就是一个新纪元</div>
+              <div class="era-metaphor">💥 比喻：火箭已经冲出大气层，正以指数级速度飞向星辰大海</div>
+            </div>
+            <div class="era-events">
+              <div class="era-event-card">
+                <div class="era-event-year">📝 2020年</div>
+                <div class="era-event-title">GPT-3发布 — AI开始能"写文章"</div>
+                <div class="era-event-desc">OpenAI发布拥有1750亿参数的GPT-3，AI的文本生成能力令人惊叹，"AI写作"走进大众视野。</div>
+                <div class="era-event-impact">影响力：★★★★</div>
+              </div>
+              <div class="era-event-card era-event-milestone">
+                <div class="era-event-year">💡 2022年11月</div>
+                <div class="era-event-title">ChatGPT发布 — AI走进千家万户</div>
+                <div class="era-event-desc">OpenAI发布ChatGPT，仅用两个月突破1亿用户（比TikTok快5倍，比Instagram快15倍）。AI从实验室走进普通人的日常生活。</div>
+                <div class="era-event-impact">影响力：★★★★★</div>
+              </div>
+              <div class="era-event-card">
+                <div class="era-event-year">👁️ 2023年</div>
+                <div class="era-event-title">GPT-4发布 — 多模态AI时代</div>
+                <div class="era-event-desc">GPT-4具备多模态能力，AI不仅能读文字，还能看图片理解内容，通过美国律师资格考试等专业考试。</div>
+                <div class="era-event-impact">影响力：★★★★</div>
+              </div>
+              <div class="era-event-card">
+                <div class="era-event-year">🌍 2024年</div>
+                <div class="era-event-title">全球大模型"百花齐放"</div>
+                <div class="era-event-desc">全球大模型竞争白热化，开源与闭源模式并行发展。中国AI公司强势崛起，与国际巨头展开正面竞争。</div>
+                <div class="era-event-impact">影响力：★★★★</div>
+              </div>
+              <div class="era-event-card era-event-milestone era-event-highlight">
+                <div class="era-event-year">🇨🇳 2025年1月</div>
+                <div class="era-event-title">DeepSeek-R1震动全球</div>
+                <div class="era-event-desc">中国AI公司深度求索发布DeepSeek-R1，训练成本仅约560万美元，性能比肩GPT-4，完全开源，引发全球AI行业的"鲶鱼效应"。</div>
+                <div class="era-event-impact">影响力：★★★★★</div>
+              </div>
+              <div class="era-event-card era-event-milestone era-event-highlight">
+                <div class="era-event-year">🌟 2025-2026年</div>
+                <div class="era-event-title">多模态AI全面爆发</div>
+                <div class="era-event-desc">Seedance 2.0等产品让AI能创作视频、音乐。AI从"文字工具"进化为"全媒体创作者"，政务AI进入规模化应用阶段。</div>
+                <div class="era-event-impact">影响力：★★★★★</div>
+              </div>
+            </div>
+            <div class="era-insight">
+              <div class="era-insight-icon">💡</div>
+              <div class="era-insight-text">启示：我们正处于AI发展的"寒武纪大爆发"时刻。就像5.4亿年前生物多样性的突然爆发一样，AI正以前所未有的速度演化。现在就是拥抱AI的最佳窗口期。</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+        <!-- 1.3 AI三大基石 -->
+    <section id="s13" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">1.3</div>
+          <div class="section-title-wrap">
+            <h2>AI三大基石</h2>
+            <p class="section-desc">算力 · 算法 · 数据 — 三者缺一不可，构成AI发展的铁三角</p>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <!-- 算力 -->
+          <div class="pillar-card open" id="pillar-compute">
+            <div class="pillar-header" onclick="togglePillar('pillar-compute')">
+              <div class="pillar-icon pillar-icon-compute">⚡</div>
+              <div class="pillar-info">
+                <div class="pillar-title">算力 — 工厂的"发动机"</div>
+                <div class="pillar-analogy">计算能力，就像汽车的马力，越大跑得越快</div>
+              </div>
+              <span class="pillar-chevron">▲</span>
+            </div>
+            <div class="pillar-body">
+              <div class="pillar-body-inner">
+                <div class="cards-grid cards-grid-2">
+                  <div>
+                    <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:10px">基础知识</h4>
+                    <ul style="font-size:14px;color:var(--text-secondary);line-height:1.9;padding-left:16px">
+                      <li><strong>计量单位</strong>：FLOPS（每秒浮点运算次数），1 EFLOPS = 每秒百亿亿次</li>
+                      <li><strong>核心硬件</strong>：GPU（图形处理器）是AI训练的核心，一块顶级GPU价值几十万元</li>
+                      <li>训练ChatGPT-4需要<strong>数万张GPU</strong>协同工作，耗电量相当于一个小城市</li>
+                      <li>国产算力：华为昇腾芯片、寒武纪芯片正在打破垄断</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:10px">🏔️ 贵州算力优势</h4>
+                    <ul style="font-size:14px;color:var(--text-secondary);line-height:1.9;padding-left:16px">
+                      <li>全国一体化算力网络<strong>国家枢纽节点</strong></li>
+                      <li>三大运营商数据中心在贵州布局</li>
+                      <li>2025年算力规模达到 <strong style="color:var(--accent-blue);font-size:16px">150 EFLOPS</strong></li>
+                      <li>2027年目标 <strong style="color:var(--accent-blue)">210 EFLOPS</strong>，国产智算全国前列</li>
+                      <li>华为云数据中心落户贵安新区</li>
+                      <li>苹果iCloud中国数据中心在贵安</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- AI芯片介绍 -->
+                <h4 style="font-size:16px;font-weight:800;color:var(--text-primary);margin:20px 0 12px;padding-top:16px;border-top:1px solid var(--border-light)">🔧 AI芯片全景 — 算力的"心脏"</h4>
+                <p style="font-size:14px;color:var(--text-secondary);margin-bottom:14px;line-height:1.8">如果说算力是"发动机"，那么<strong>芯片就是发动机里的"汽缸"</strong>。不同类型的芯片各有所长，就像不同工种各司其职。</p>
+
+                <!-- AI芯片视频 -->
+                <div style="margin:16px 0;border-radius:12px;overflow:hidden;border:1px solid var(--border-light);box-shadow:var(--shadow-md);background:#000">
+                  <video controls playsinline preload="metadata" style="width:100%;display:block;max-height:400px;object-fit:contain" poster="">
+                    <source src="assets/cases/xinpian-video.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                  </video>
+                  <div style="padding:8px 14px;background:var(--bg-card);font-size:12px;color:var(--text-muted);text-align:center">🎬 AI芯片介绍视频 — 了解芯片如何驱动人工智能</div>
+                </div>
+
+                <div class="cards-grid cards-grid-2" style="margin-bottom:14px">
+                  <div class="info-box">
+                    <div class="info-box-title">🖥️ CPU（中央处理器）</div>
+                    <div class="case-card-img-wrap" style="margin:10px 0"><img src="assets/cases/cpu-chip.png" alt="CPU芯片" style="max-width:100%;height:auto;border-radius:10px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)"></div>
+                    <p style="font-size:13px;line-height:1.8">电脑的<strong>"大脑管家"</strong>，什么都能干，但一次只能做少量任务。<br>好比一位<strong>全能型教授</strong>，什么都懂，但一次只能辅导几个学生。<br><strong>代表</strong>：Intel至强、AMD EPYC<br><strong>AI角色</strong>：负责任务调度和数据预处理，不擅长大规模并行计算。</p>
+                  </div>
+                  <div class="info-box">
+                    <div class="info-box-title" style="color:#22c55e">⚡ GPU（图形处理器）</div>
+                    <div class="case-card-img-wrap" style="margin:10px 0"><img src="assets/cases/gpu-chip.png" alt="GPU芯片" style="max-width:100%;height:auto;border-radius:10px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)"></div>
+                    <p style="font-size:13px;line-height:1.8">原本为游戏画面设计，却意外成为<strong>AI训练的"主力军"</strong>。<br>好比<strong>一万个小学生同时做加法</strong>，单个简单但胜在数量庞大。<br><strong>代表</strong>：NVIDIA A100、H100、H200（训练ChatGPT的核心）<br><strong>AI角色</strong>：大规模并行计算，是当前AI训练和推理的绝对主力。</p>
+                  </div>
+                </div>
+
+                <div class="cards-grid cards-grid-2" style="margin-bottom:14px">
+                  <div class="info-box">
+                    <div class="info-box-title" style="color:#f59e0b">🧩 TPU（张量处理器）</div>
+                    <div class="case-card-img-wrap" style="margin:10px 0"><img src="assets/cases/tpu-chip.png" alt="TPU芯片" style="max-width:100%;height:auto;border-radius:10px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)"></div>
+                    <p style="font-size:13px;line-height:1.8">Google专门为AI设计的<strong>"定制芯片"</strong>。<br>好比一台<strong>专用计算器</strong>，只做矩阵运算，但做得极快。<br><strong>代表</strong>：Google TPU v5e<br><strong>AI角色</strong>：专用于Google自家AI模型训练（Gemini等）。</p>
+                  </div>
+                  <div class="info-box">
+                    <div class="info-box-title" style="color:#ec4899">🧠 NPU（神经网络处理器）</div>
+                    <div class="case-card-img-wrap" style="margin:10px 0"><img src="assets/cases/npu-chip.png" alt="NPU芯片" style="max-width:100%;height:auto;border-radius:10px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)"></div>
+                    <p style="font-size:13px;line-height:1.8">嵌入手机、电脑中的<strong>"AI小助手"</strong>，让终端设备也能跑AI。<br>好比每个人口袋里的<strong>迷你AI加速器</strong>。<br><strong>代表</strong>：华为麒麟芯片中的NPU、苹果Neural Engine<br><strong>AI角色</strong>：端侧推理，如手机拍照AI优化、语音识别。</p>
+                  </div>
+                </div>
+
+                <div class="info-box" style="margin-bottom:14px;border-left:4px solid var(--accent-blue)">
+                  <div class="info-box-title" style="color:var(--accent-blue)">🇨🇳 国产AI芯片 — 突破"卡脖子"</div>
+                  <p style="font-size:13px;line-height:1.8">美国对华芯片出口限制后，国产芯片加速追赶：</p>
+                  <ul style="font-size:13px;color:var(--text-secondary);line-height:1.9;padding-left:16px;margin-top:6px">
+                    <li><strong>华为昇腾910B/910C</strong> — 国产AI训练芯片代表，已在多个政务AI项目中规模部署</li>
+                    <li><strong>寒武纪思元系列</strong> — 专注AI推理加速，在智慧城市、安防等领域广泛应用</li>
+                    <li><strong>百度昆仑芯</strong> — 百度自研，用于搜索和文心一言</li>
+                    <li><strong>海光DCU</strong> — 兼容CUDA生态的国产GPU替代方案</li>
+                  </ul>
+                  <div class="quote-box" style="margin-top:10px"><p>贵州作为全国算力枢纽节点，<strong>华为昇腾生态</strong>在贵安新区已形成集聚效应，为政务AI提供国产算力底座。</p></div>
+                </div>
+
+                <div class="cards-grid cards-grid-3" style="margin-top:14px">
+                  <div class="stat-card"><div class="stat-num" data-count="150" data-suffix="E">150E</div><div class="stat-label">贵州2025年算力<br>（EFLOPS）</div></div>
+                  <div class="stat-card"><div class="stat-num" data-count="210" data-suffix="E">210E</div><div class="stat-label">贵州2027年目标<br>（EFLOPS）</div></div>
+                  <div class="stat-card"><div class="stat-num" data-count="3">3</div><div class="stat-label">入驻三大运营商<br>数据中心</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 算法 -->
+          <div class="pillar-card" id="pillar-algo">
+            <div class="pillar-header" onclick="togglePillar('pillar-algo')">
+              <div class="pillar-icon pillar-icon-algo">🔬</div>
+              <div class="pillar-info">
+                <div class="pillar-title">算法 — 工厂的"工艺流程"</div>
+                <div class="pillar-analogy">解题步骤，告诉AI怎么从数据中学到知识</div>
+              </div>
+              <span class="pillar-chevron">▼</span>
+            </div>
+            <div class="pillar-body">
+              <div class="pillar-body-inner">
+                <div class="cards-grid cards-grid-2">
+                  <div>
+                    <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:10px">核心算法演变</h4>
+                    <ul style="font-size:14px;color:var(--text-secondary);line-height:1.9;padding-left:16px">
+                      <li><strong>传统算法</strong>（决策树、回归等）：像查字典一样按规则查找</li>
+                      <li><strong>神经网络</strong>：模仿人脑，越学越聪明</li>
+                      <li><strong>Transformer架构</strong>：2017年Google提出，是ChatGPT的核心架构</li>
+                    </ul>
+                    <div class="quote-box" style="margin-top:12px">
+                      <p>以前的AI读文章像"逐字阅读"，Transformer能"一目十行"。"注意力机制"让AI能关注<strong>最重要的信息</strong>。</p>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:10px">开源 vs 闭源生态</h4>
+                    <div class="info-box" style="margin-bottom:10px">
+                      <div class="info-box-title">🔓 开源代表</div>
+                      <p>DeepSeek、Llama（Meta）、通义千问 — 代码公开，所有人可修改、改进、部署</p>
+                    </div>
+                    <div class="info-box">
+                      <div class="info-box-title" style="color:var(--warning)">🔒 闭源代表</div>
+                      <p>GPT-4、Claude、Gemini — 商业保密，通过API调用</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 数据 -->
+          <div class="pillar-card" id="pillar-data">
+            <div class="pillar-header" onclick="togglePillar('pillar-data')">
+              <div class="pillar-icon pillar-icon-data">📦</div>
+              <div class="pillar-info">
+                <div class="pillar-title">数据 — 工厂的"原材料"</div>
+                <div class="pillar-analogy">AI学习的"教材"，没有数据AI就是巧妇难为无米之炊</div>
+              </div>
+              <span class="pillar-chevron">▼</span>
+            </div>
+            <div class="pillar-body">
+              <div class="pillar-body-inner">
+                <div class="cards-grid cards-grid-2">
+                  <div>
+                    <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:10px">数据质量 &gt; 数据数量</h4>
+                    <div class="quote-box">
+                      <p>给学生<strong>10本精品教材</strong>，比给100本劣质教材效果更好。<strong>"垃圾进，垃圾出"</strong>——数据质量决定AI质量。</p>
+                    </div>
+                    <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin:14px 0 8px">数据类型</h4>
+                    <ul style="font-size:14px;color:var(--text-secondary);line-height:1.9;padding-left:16px">
+                      <li><strong>结构化数据</strong>：表格数据（户籍信息、纳税记录）</li>
+                      <li><strong>非结构化数据</strong>：文本、图片、视频、语音（占总量80%）</li>
+                      <li><strong>半结构化数据</strong>：日志、邮件等</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:10px">政务数据的特殊价值</h4>
+                    <div class="cards-grid" style="gap:8px">
+                      <div class="info-box">
+                        <div class="info-box-title">👥 覆盖全民</div>
+                        <p>人口、教育、社保、医疗——涵盖每一位公民</p>
+                      </div>
+                      <div class="info-box">
+                        <div class="info-box-title">🏛️ 权威性最高</div>
+                        <p>来源于政府登记和管理，可信度远超互联网数据</p>
+                      </div>
+                      <div class="info-box">
+                        <div class="info-box-title">📅 时间跨度长</div>
+                        <p>多年积累的历史数据，可支撑趋势分析与预测</p>
+                      </div>
+                      <div class="info-box">
+                        <div class="info-box-title">🔗 关联性强</div>
+                        <p>多部门数据可以交叉分析，产生更大价值</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1.4 AI对社会的影响 -->
+    <section id="s14" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">1.4</div>
+          <div class="section-title-wrap">
+            <h2>AI对社会的影响与思考</h2>
+            <p class="section-desc">机遇与挑战并存，政策引领方向</p>
+          </div>
+        </div>
+
+        <div class="cards-grid cards-grid-3 fade-in">
+          <div class="card" style="border-top:4px solid var(--success)">
+            <div class="card-icon" style="background:rgba(16,185,129,0.1)">🚀</div>
+            <div class="card-title">AI带来的机遇</div>
+            <div class="card-body">
+              <ul>
+                <li><strong>提高效率</strong>：一个AI助手可以替代大量重复性工作，让政府工作人员专注于更有价值的事务</li>
+                <li><strong>精准决策</strong>：数据驱动代替经验驱动，减少主观判断偏差</li>
+                <li><strong>普惠服务</strong>：偏远山区也能获得与大城市同等质量的公共服务</li>
+                <li><strong>降低成本</strong>：AI自动化处理降低行政成本</li>
+                <li><strong>24小时服务</strong>：政务AI不休息，随时响应群众需求</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" style="border-top:4px solid var(--warning)">
+            <div class="card-icon" style="background:rgba(245,158,11,0.1)">⚠️</div>
+            <div class="card-title">AI带来的挑战</div>
+            <div class="card-body">
+              <ul>
+                <li><strong>数据安全与隐私保护</strong>：政务数据涉及公民隐私，一旦泄露后果严重</li>
+                <li><strong>AI偏见和公平性</strong>：训练数据中的偏见会被AI放大，可能导致不公平决策</li>
+                <li><strong>就业结构变化</strong>：部分重复性岗位将被AI替代</li>
+                <li><strong>可解释性问题</strong>：AI的决策过程不透明，"黑箱"风险</li>
+                <li><strong>技术依赖风险</strong>：过度依赖AI可能导致能力退化</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" style="border-top:4px solid var(--accent-blue)">
+            <div class="card-icon">🏛️</div>
+            <div class="card-title">中国AI政策方向</div>
+            <div class="card-body">
+              <ul>
+                <li><strong>2024年政府工作报告</strong>：明确开展"人工智能+"行动，推动AI与各行业深度融合</li>
+                <li><strong>2025年标杆评选</strong>："人工智能+政务"规范应用案例评选，全国14个入选，引领示范</li>
+                <li><strong>安全可控原则</strong>：强调"安全可控"，推动国产化替代，保障数据主权</li>
+                <li><strong>贵州先行先试</strong>：贵州依托算力优势，率先探索政务AI应用</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PART 2 HEADER ==================== -->
+    <div class="part-header" id="part2">
+      <div class="part-header-inner">
+        <div class="part-num">2</div>
+        <div class="part-header-text">
+          <div class="part-title">大数据与政务数据开发利用</div>
+          <div class="part-meta">第二部分 · 约40分钟 · 大数据理论与政务数据实践</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.1 大数据核心概念 -->
+    <section id="s21" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">2.1</div>
+          <div class="section-title-wrap">
+            <h2>大数据核心概念</h2>
+            <p class="section-desc">理解大数据的4V特征：Volume / Velocity / Variety / Value</p>
+          </div>
+        </div>
+
+        <div class="cards-grid cards-grid-4 fade-in">
+          <div class="fourv-card">
+            <div class="fourv-letter">V</div>
+            <div class="fourv-word">Volume · 大量</div>
+            <div class="fourv-desc">
+              <ul style="padding-left:14px;font-size:14px">
+                <li>2025年全球数据总量超 <strong>200ZB</strong></li>
+                <li>1ZB = 10亿TB = 2500亿张DVD</li>
+                <li>仅中国政务系统每天产生的数据就以<strong>PB</strong>计</li>
+                <li>遵义市2865个数据目录，2313个数据资源</li>
+              </ul>
+            </div>
+          </div>
+          <div class="fourv-card" style="border-top-color:var(--accent-cyan)">
+            <div class="fourv-letter" style="color:var(--accent-cyan)">V</div>
+            <div class="fourv-word">Velocity · 高速</div>
+            <div class="fourv-desc">
+              <ul style="padding-left:14px;font-size:14px">
+                <li>每分钟全球发送<strong>1.6亿封邮件</strong></li>
+                <li>每分钟<strong>500小时</strong>YouTube视频上传</li>
+                <li>12345热线每天处理<strong>数万条</strong>来电，需实时分析</li>
+                <li>政务数据需要实时汇聚、实时处理</li>
+              </ul>
+            </div>
+          </div>
+          <div class="fourv-card" style="border-top-color:var(--success)">
+            <div class="fourv-letter" style="color:var(--success)">V</div>
+            <div class="fourv-word">Variety · 多样</div>
+            <div class="fourv-desc">
+              <ul style="padding-left:14px;font-size:14px">
+                <li>结构化数据（表格、报表）只占<strong>20%</strong></li>
+                <li>非结构化数据（文件、图片、视频、语音）占<strong>80%</strong></li>
+                <li>政务数据：户籍照片、执法视频、政策文件、热线录音</li>
+                <li>多样性是政务AI处理难点所在</li>
+              </ul>
+            </div>
+          </div>
+          <div class="fourv-card" style="border-top-color:var(--warning)">
+            <div class="fourv-letter" style="color:var(--warning)">V</div>
+            <div class="fourv-word">Value · 价值</div>
+            <div class="fourv-desc">
+              <div class="quote-box" style="margin:0 0 10px">
+                <p>大数据就像<strong>"沙里淘金"</strong>——价值密度低但总量巨大，关键在于"挖掘"。政务数据的价值密度远高于互联网数据。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.2 政务大数据 -->
+    <section id="s22" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">2.2</div>
+          <div class="section-title-wrap">
+            <h2>政务大数据</h2>
+            <p class="section-desc">政府在管理和服务过程中产生和使用的数据</p>
+          </div>
+        </div>
+
+        <div class="fade-in" style="margin-bottom:20px">
+          <div class="case-card-img-wrap landscape" style="margin:0 auto;max-width:800px"><img src="assets/cases/gov-bigdata.png" alt="政务大数据概念图" style="width:100%;height:auto;border-radius:12px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)"></div>
+        </div>
+
+        <div class="cards-grid cards-grid-3 fade-in" style="margin-bottom:24px">
+          <div class="card card-accent-left">
+            <div class="card-title">👥 人口基础数据</div>
+            <div class="card-body">户籍、身份、婚姻、教育、社保记录，覆盖全体公民生命周期</div>
+          </div>
+          <div class="card card-accent-left">
+            <div class="card-title">🏢 法人数据</div>
+            <div class="card-body">企业注册、营业执照、经营数据、税务信息，支撑营商环境分析</div>
+          </div>
+          <div class="card card-accent-left">
+            <div class="card-title">🗺️ 自然资源与地理数据</div>
+            <div class="card-body">土地、矿产、水资源、空间地理信息，支撑国土规划与生态保护</div>
+          </div>
+          <div class="card card-accent-left">
+            <div class="card-title">📈 宏观经济数据</div>
+            <div class="card-body">GDP、税收、就业、财政，反映经济社会运行状态</div>
+          </div>
+          <div class="card card-accent-left">
+            <div class="card-title">🔒 社会治理数据</div>
+            <div class="card-body">治安、信访、应急、司法，支撑社会稳定与风险防控</div>
+          </div>
+          <div class="card card-accent-left">
+            <div class="card-title">🏥 公共服务数据</div>
+            <div class="card-body">医疗、教育、社保、交通，直接服务群众生活需求</div>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.1rem;font-weight:800;color:var(--text-primary);margin-bottom:16px;border-left:4px solid var(--accent-blue);padding-left:12px">政务数据的五大特点</h3>
+        <div class="fade-in" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+          <div style="flex:1 1 calc(20% - 12px);min-width:170px;max-width:240px;background:var(--bg-card);border-radius:14px;padding:20px 16px;text-align:center;border:1px solid var(--border-light);box-shadow:var(--shadow-sm);transition:transform 0.2s,box-shadow 0.2s" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-blue)'" onmouseleave="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:20px;font-weight:800">1</div>
+            <div style="font-size:0.92rem;font-weight:700;color:var(--text-primary);margin-bottom:6px">权威性高</div>
+            <div style="font-size:0.8rem;color:var(--text-secondary);line-height:1.7">来源于政府官方登记，具有法律效力，是最权威的数据来源</div>
+          </div>
+          <div style="flex:1 1 calc(20% - 12px);min-width:170px;max-width:240px;background:var(--bg-card);border-radius:14px;padding:20px 16px;text-align:center;border:1px solid var(--border-light);box-shadow:var(--shadow-sm);transition:transform 0.2s,box-shadow 0.2s" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-blue)'" onmouseleave="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:20px;font-weight:800">2</div>
+            <div style="font-size:0.92rem;font-weight:700;color:var(--text-primary);margin-bottom:6px">覆盖面广</div>
+            <div style="font-size:0.8rem;color:var(--text-secondary);line-height:1.7">涉及每一位公民和每一家企业，是最具代表性的全量数据</div>
+          </div>
+          <div style="flex:1 1 calc(20% - 12px);min-width:170px;max-width:240px;background:var(--bg-card);border-radius:14px;padding:20px 16px;text-align:center;border:1px solid var(--border-light);box-shadow:var(--shadow-sm);transition:transform 0.2s,box-shadow 0.2s" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-blue)'" onmouseleave="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:20px;font-weight:800">3</div>
+            <div style="font-size:0.92rem;font-weight:700;color:var(--text-primary);margin-bottom:6px">时效性强</div>
+            <div style="font-size:0.8rem;color:var(--text-secondary);line-height:1.7">与经济社会运行同步更新，能反映当前真实状态</div>
+          </div>
+          <div style="flex:1 1 calc(20% - 12px);min-width:170px;max-width:240px;background:var(--bg-card);border-radius:14px;padding:20px 16px;text-align:center;border:1px solid var(--border-light);box-shadow:var(--shadow-sm);transition:transform 0.2s,box-shadow 0.2s" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-blue)'" onmouseleave="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:20px;font-weight:800">4</div>
+            <div style="font-size:0.92rem;font-weight:700;color:var(--text-primary);margin-bottom:6px">标准化程度高</div>
+            <div style="font-size:0.8rem;color:var(--text-secondary);line-height:1.7">有统一的数据标准和格式，如身份证号、统一社会信用代码，便于整合</div>
+          </div>
+          <div style="flex:1 1 calc(20% - 12px);min-width:170px;max-width:240px;background:var(--bg-card);border-radius:14px;padding:20px 16px;text-align:center;border:1px solid var(--border-light);box-shadow:var(--shadow-sm);transition:transform 0.2s,box-shadow 0.2s" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-blue)'" onmouseleave="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#dc2626,#ef4444);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:20px;font-weight:800">5</div>
+            <div style="font-size:0.92rem;font-weight:700;color:var(--text-primary);margin-bottom:6px">安全要求严</div>
+            <div style="font-size:0.8rem;color:var(--text-secondary);line-height:1.7">涉及个人隐私和国家安全，必须依法依规管理</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.3 数据共享开放授权运营 -->
+    <section id="s23" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">2.3</div>
+          <div class="section-title-wrap">
+            <h2>数据共享、开放与授权运营</h2>
+            <p class="section-desc">三种数据开发利用模式的详细对比</p>
+          </div>
+        </div>
+
+        <div class="tab-nav fade-in">
+          <button class="tab-btn active" onclick="switchTab('share-tabs', 'tab-share', this)">📤 数据共享</button>
+          <button class="tab-btn" onclick="switchTab('share-tabs', 'tab-open', this)">🌐 数据开放</button>
+          <button class="tab-btn" onclick="switchTab('share-tabs', 'tab-auth', this)">🏭 数据授权运营</button>
+        </div>
+
+        <div id="share-tabs" class="fade-in">
+          <!-- 数据共享 -->
+          <div id="tab-share" class="tab-pane active">
+            <div class="cards-grid cards-grid-2">
+              <div>
+                <div class="card card-accent-top" style="margin-bottom:0">
+                  <div class="card-title">数据共享</div>
+                  <div class="card-subtitle">政府内部数据交换</div>
+                  <div class="card-body">
+                    <div class="quote-box"><p>就像政府内部的<strong>"图书馆互借"</strong>——部门之间把各自掌握的数据互相借用，提高行政效率。</p></div>
+                    <div class="badges-row">
+                      <span class="badge badge-blue">面向对象：政务部门</span>
+                      <span class="badge badge-blue">目的：履职需要</span>
+                    </div>
+                    <div style="margin-top:12px;font-size:13px;color:var(--text-muted)">
+                      <strong>政策依据：</strong>《政务数据共享条例》《贵州省政务数据资源管理办法》<br>
+                      <strong>遵义实践：</strong>贵州省数据共享交换平台-遵义专区，目录总数 <strong style="color:var(--accent-blue)">2865个</strong>，资源总数 <strong style="color:var(--accent-blue)">2313个</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 style="font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:12px">📋 流程步骤（5步）</h4>
+                <div class="flow-steps">
+                  <div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-text">数据产生部门<strong>汇聚治理</strong>政务数据</div></div>
+                  <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-text">将数据<strong>上架</strong>贵州省数据共享交换平台</div></div>
+                  <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-text">场景应用需求部门在平台上<strong>申请所需数据</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-text">将数据<strong>接入具体应用场景</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">5</div><div class="flow-step-text"><strong>实现数据应用价值</strong>，提升行政效率</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 数据开放 -->
+          <div id="tab-open" class="tab-pane">
+            <div class="cards-grid cards-grid-2">
+              <div>
+                <div class="card card-accent-top" style="margin-bottom:0">
+                  <div class="card-title">数据开放</div>
+                  <div class="card-subtitle">面向社会公众免费开放</div>
+                  <div class="card-body">
+                    <div class="quote-box"><p>就像把政府的<strong>"书"</strong>放到公共阅览室——任何人都可以来翻阅、利用，激发社会创新。</p></div>
+                    <div class="badges-row">
+                      <span class="badge badge-green">面向对象：社会公众</span>
+                      <span class="badge badge-green">目的：社会利用</span>
+                    </div>
+                    <div style="margin-top:12px;font-size:13px;color:var(--text-muted)">
+                      <strong>政策依据：</strong>贵州省政府数据开放平台<br>
+                      <strong>数据处理：</strong>数据经过脱敏处理后向社会公开发布
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 style="font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:12px">📋 流程步骤（5步）</h4>
+                <div class="flow-steps">
+                  <div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-text">数据产生部门<strong>汇聚治理</strong>政务数据</div></div>
+                  <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-text">数据<strong>脱敏处理</strong>后上架省政府数据开放平台</div></div>
+                  <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-text">个人、企业、社会机构在平台上<strong>申请数据</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-text">将数据<strong>接入具体应用场景</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">5</div><div class="flow-step-text"><strong>实现数据应用价值</strong>，激活社会创新</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 数据授权运营 -->
+          <div id="tab-auth" class="tab-pane">
+            <div class="cards-grid cards-grid-2">
+              <div>
+                <div class="card card-accent-top" style="margin-bottom:0">
+                  <div class="card-title">数据授权运营</div>
+                  <div class="card-subtitle">原始数据不出域 · 市场化运营</div>
+                  <div class="card-body">
+                    <div class="quote-box"><p>就像<strong>"数据加工厂"</strong>——原材料不出门，但加工出来的产品可以出售。<strong>"数据可用不可见"</strong>是核心原则。</p></div>
+                    <div class="badges-row">
+                      <span class="badge badge-orange">面向对象：市场主体</span>
+                      <span class="badge badge-orange">目的：市场化运营</span>
+                    </div>
+                    <div style="margin-top:12px;font-size:13px;color:var(--text-muted)">
+                      <strong>政策依据：</strong>《贵州省公共数据授权运营管理办法(试行)》<br>
+                      <strong>核心原则：</strong>"原始数据不出域、数据可用不可见"
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 style="font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:12px">📋 流程步骤（10步）</h4>
+                <div class="flow-steps">
+                  <div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-text">企业<strong>谋划数据应用场景</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-text">在省平台<strong>提出场景建设需求</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-text">市大数据局进行<strong>需求审批</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-text">数据提供部门根据需求<strong>上架数据</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">5</div><div class="flow-step-text">数据推送至<strong>可信数据空间</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">6</div><div class="flow-step-text">授权运营机构进行<strong>初级数据产品加工</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">7</div><div class="flow-step-text">初级产品通过可信空间<strong>授权给开发利用机构</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">8</div><div class="flow-step-text">开发利用机构进行<strong>二次加工</strong>形成数据产品</div></div>
+                  <div class="flow-step"><div class="flow-step-num">9</div><div class="flow-step-text"><strong>申请数据产品出域</strong></div></div>
+                  <div class="flow-step"><div class="flow-step-num">10</div><div class="flow-step-text"><strong>实现数据应用价值</strong>，数据成为生产要素</div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 对比表格 -->
+        <div class="fade-in" style="margin-top:24px">
+          <h3 style="font-size:1.05rem;font-weight:800;color:var(--text-primary);margin-bottom:12px;border-left:4px solid var(--accent-blue);padding-left:12px">三种模式核心对比</h3>
+          <div class="goal-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>对比维度</th>
+                  <th>📤 数据共享</th>
+                  <th>🌐 数据开放</th>
+                  <th>🏭 数据授权运营</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>面向对象</td><td>政务部门</td><td>社会公众</td><td>市场主体</td></tr>
+                <tr><td>目的</td><td>履职需要</td><td>社会利用</td><td>市场化运营</td></tr>
+                <tr><td>数据流向</td><td>部门间直接流转</td><td>平台公开发布</td><td>不出域，产品出域</td></tr>
+                <tr><td>运营方式</td><td>政府间直接开展</td><td>政府平台发布</td><td>第三方授权运营</td></tr>
+                <tr><td>安全要求</td><td>高</td><td>中（脱敏后）</td><td>最高（不出域）</td></tr>
+                <tr><td>经济价值</td><td>行政效率提升</td><td>激活社会创新</td><td>数据要素市场化</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.4 可信数据空间 -->
+    <section id="s24" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">2.4</div>
+          <div class="section-title-wrap">
+            <h2>可信数据空间</h2>
+            <p class="section-desc">数据流通利用的新型基础设施</p>
+          </div>
+        </div>
+
+        <!-- 可信数据空间概念图 -->
+        <div class="fade-in" style="margin-bottom:20px">
+          <div class="case-card-img-wrap landscape" style="margin:0 auto;max-width:800px"><img src="assets/cases/trusted-data-space.png" alt="可信数据空间概念图" style="width:100%;height:auto;border-radius:12px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)"></div>
+        </div>
+
+        <div class="cards-grid cards-grid-2 fade-in">
+          <div>
+            <div class="card card-accent-top">
+              <div class="card-icon">🔐</div>
+              <div class="card-title">什么是可信数据空间</div>
+              <div class="card-body">
+                <p>基于共识规则、联接多方主体、实现数据资源共享共用的数据流通利用基础设施。</p>
+                <div class="quote-box" style="margin:12px 0">
+                  <p><strong>核心理念：</strong>数据不出门，但能被"远程调用"来参与计算与分析。就像两家公司各自锁着自己的账本，但可以通过一个<strong>"透明计算器"</strong>算出共同需要的结果。</p>
+                </div>
+                <h4 style="font-size:14px;font-weight:700;margin-bottom:8px">技术支撑</h4>
+                <ul style="font-size:14px;color:var(--text-secondary);padding-left:16px;line-height:1.9">
+                  <li><strong>隐私计算</strong>：多方安全计算、联邦学习、可信执行环境</li>
+                  <li><strong>数据沙箱</strong>：在安全环境中进行数据分析，原始数据不外泄</li>
+                  <li><strong>区块链</strong>：确保数据使用可追溯、不可篡改</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:12px;border-left:4px solid var(--accent-blue);padding-left:12px">三大核心价值</h4>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div class="info-box">
+                <div class="info-box-title">① 打破数据孤岛</div>
+                <p>让原本"各自为政"的数据能够协同发挥作用，消除部门壁垒</p>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title">② 保障数据安全与隐私</div>
+                <p>原始数据始终在自己手中，不会泄露到外部，从技术层面保障数据主权</p>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title">③ 推动数据要素市场化</div>
+                <p>让数据像土地、资本一样成为生产要素，释放数据的经济价值</p>
+              </div>
+            </div>
+            <div class="info-box" style="margin-top:10px;background:rgba(37,99,235,0.08)">
+              <div class="info-box-title">💼 典型案例</div>
+              <p>银行和保险公司合作做风控，双方数据在"看不见原始数据"的前提下完成联合建模，既实现了业务协作，又保护了各自的数据资产。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5 遵义市实践 -->
+    <section id="s25" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">2.5</div>
+          <div class="section-title-wrap">
+            <h2>遵义市数据授权运营实践</h2>
+            <p class="section-desc">六大试点场景 · 打造可信数据空间样板</p>
+          </div>
+        </div>
+
+        <div class="cards-grid cards-grid-3 fade-in" style="margin-bottom:20px">
+          <div class="stat-card"><div class="stat-num" data-count="32">32</div><div class="stat-label">初级数据产品</div></div>
+          <div class="stat-card"><div class="stat-num" data-count="12">12</div><div class="stat-label">二级数据产品</div></div>
+          <div class="stat-card"><div class="stat-num" data-count="6">6</div><div class="stat-label">已建成场景平台</div></div>
+        </div>
+
+        <div class="cards-grid cards-grid-3 fade-in">
+          <div class="card card-accent-top">
+            <div class="card-icon">🏥</div>
+            <div class="card-title">医疗场景</div>
+            <div class="card-body">医疗数据的安全共享，助力精准医疗。在保障患者隐私的前提下，实现医疗机构间数据互通，提升诊疗精准度。</div>
+          </div>
+          <div class="card card-accent-top">
+            <div class="card-icon">👴</div>
+            <div class="card-title">养老场景</div>
+            <div class="card-body">打通养老服务数据，提升老年人服务精准度。将民政、医疗、社保等数据整合，为老年人提供个性化服务。</div>
+          </div>
+          <div class="card card-accent-top">
+            <div class="card-icon">🚌</div>
+            <div class="card-title">出行场景</div>
+            <div class="card-body">交通数据优化出行体验。整合公交、地铁、出租车等多种交通数据，智能优化路网，减少出行拥堵。</div>
+          </div>
+          <div class="card card-accent-top">
+            <div class="card-icon">🅿️</div>
+            <div class="card-title">停车场景</div>
+            <div class="card-body">智慧停车数据应用，缓解停车难。实时汇聚停车场数据，为驾驶人提供精准停车引导。</div>
+          </div>
+          <div class="card card-accent-top">
+            <div class="card-icon">🔥</div>
+            <div class="card-title">消防场景</div>
+            <div class="card-body">消防数据预警，提升安全保障。整合建筑信息、消防设施数据，实现火灾风险智能预警。</div>
+          </div>
+          <div class="card card-accent-top">
+            <div class="card-icon">🛗</div>
+            <div class="card-title">电梯维保场景</div>
+            <div class="card-body">电梯运行数据监测，保障乘梯安全。实时监测电梯运行状态，提前预警故障风险，保障市民安全。</div>
+          </div>
+        </div>
+
+        <div class="info-box fade-in" style="margin-top:16px">
+          <div class="info-box-title">📋 政策背景</div>
+          <p>印发《遵义市第一批公共数据授权运营试点工作方案》，由云上遵义大数据有限公司作为运营机构，搭建可信数据空间，率先在全省探索数据授权运营新模式。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 课间休息·听AI唱歌 ==================== -->
+    <section id="music-break" class="page-section" style="background:linear-gradient(160deg,#0f172a 0%,#1e293b 40%,#1a1a2e 100%);padding:48px 0;position:relative;overflow:hidden">
+      <!-- 背景装饰元素 -->
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;pointer-events:none">
+        <div style="position:absolute;top:10%;left:5%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(225,29,72,0.12) 0%,transparent 70%)"></div>
+        <div style="position:absolute;bottom:15%;right:8%;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,0.1) 0%,transparent 70%)"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,0.06) 0%,transparent 70%)"></div>
+      </div>
+
+      <div class="section-max" style="position:relative;z-index:1">
+        <!-- 标题 -->
+        <div style="text-align:center;margin-bottom:32px">
+          <div style="display:inline-flex;align-items:center;gap:10px;padding:8px 24px;background:rgba(225,29,72,0.12);border:1px solid rgba(225,29,72,0.25);border-radius:40px;margin-bottom:16px">
+            <span style="font-size:18px">☕</span>
+            <span style="font-size:0.88rem;font-weight:600;color:#fb7185;letter-spacing:2px">课间休息 · 听AI唱歌</span>
+          </div>
+          <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#f1f5f9;margin-bottom:6px">《数说遵义》</h2>
+          <p style="font-size:0.88rem;color:rgba(241,245,249,0.5)">倾听 AI述说遵义</p>
+        </div>
+
+        <!-- 专辑封面 + 播放器 -->
+        <div style="display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;justify-content:center">
+          <!-- 封面 -->
+          <div style="flex:0 0 auto;position:relative">
+            <div id="album-vinyl" style="position:relative;width:280px;height:280px">
+              <!-- 黑胶唱片背景 -->
+              <div id="vinyl-disc" style="position:absolute;top:10px;left:50px;width:240px;height:240px;border-radius:50%;background:conic-gradient(from 0deg,#111 0%,#222 10%,#111 20%,#1a1a1a 30%,#111 40%,#222 50%,#111 60%,#1a1a1a 70%,#111 80%,#222 90%,#111 100%);box-shadow:0 0 30px rgba(0,0,0,0.5);transition:transform 0.3s ease">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#e11d48,#be123c);display:flex;align-items:center;justify-content:center">
+                  <div style="width:16px;height:16px;border-radius:50%;background:#111"></div>
+                </div>
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:200px;height:200px;border-radius:50%;border:1px solid rgba(255,255,255,0.04)"></div>
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:160px;height:160px;border-radius:50%;border:1px solid rgba(255,255,255,0.03)"></div>
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120px;height:120px;border-radius:50%;border:1px solid rgba(255,255,255,0.03)"></div>
+              </div>
+              <!-- 封面图片 -->
+              <img src="assets/cases/shushuo-zunyi-cover.png" alt="数说遵义专辑封面" style="position:relative;z-index:2;width:240px;height:240px;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.08);object-fit:cover">
+            </div>
+            <div style="text-align:center;margin-top:12px">
+              <div style="font-size:1rem;font-weight:800;color:#f1f5f9">数说遵义</div>
+              <div style="font-size:0.78rem;color:rgba(241,245,249,0.4);margin-top:2px">AI 作词作曲演唱</div>
+            </div>
+          </div>
+
+          <!-- 右侧播放器 + 歌词 -->
+          <div style="flex:1;min-width:300px;max-width:560px">
+            <!-- 版本切换 -->
+            <div style="display:flex;gap:8px;margin-bottom:16px">
+              <button onclick="switchSongVersion('v1')" id="song-btn-v1" style="flex:1;padding:10px 16px;border-radius:10px;border:1px solid rgba(225,29,72,0.5);background:rgba(225,29,72,0.15);color:#fb7185;font-size:0.85rem;font-weight:700;cursor:pointer;transition:all 0.3s">🎤 版本一 <span style="font-size:0.75rem;opacity:0.7">3:07</span></button>
+              <button onclick="switchSongVersion('v2')" id="song-btn-v2" style="flex:1;padding:10px 16px;border-radius:10px;border:1px solid rgba(148,163,184,0.3);background:rgba(148,163,184,0.08);color:#94a3b8;font-size:0.85rem;font-weight:700;cursor:pointer;transition:all 0.3s">🎤 版本二 <span style="font-size:0.75rem;opacity:0.7">4:14</span></button>
+            </div>
+
+            <!-- 音频播放器 -->
+            <div style="background:rgba(255,255,255,0.05);border-radius:14px;padding:16px;border:1px solid rgba(255,255,255,0.08);margin-bottom:20px">
+              <audio id="song-audio" src="assets/cases/shushuo-zunyi-v1.mp3" preload="metadata" style="display:none"></audio>
+              <div style="display:flex;align-items:center;gap:14px">
+                <button onclick="toggleSongPlay()" id="song-play-btn" style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#e11d48,#be123c);border:none;color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(225,29,72,0.3);transition:transform 0.2s;flex-shrink:0">▶</button>
+                <div style="flex:1">
+                  <div style="position:relative;height:6px;background:rgba(255,255,255,0.1);border-radius:3px;cursor:pointer;margin-bottom:6px" onclick="seekSong(event)" id="song-progress-bar">
+                    <div id="song-progress" style="height:100%;width:0%;background:linear-gradient(90deg,#e11d48,#f43f5e);border-radius:3px;transition:width 0.1s linear"></div>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:rgba(241,245,249,0.4)">
+                    <span id="song-current-time">0:00</span>
+                    <span id="song-duration">0:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 歌词展示 -->
+            <div style="background:rgba(255,255,255,0.03);border-radius:14px;padding:20px;border:1px solid rgba(255,255,255,0.06);max-height:320px;overflow-y:auto" id="lyrics-box">
+              <div style="text-align:center;margin-bottom:14px">
+                <span style="font-size:0.75rem;color:rgba(241,245,249,0.35);letter-spacing:3px;text-transform:uppercase">— 歌词 LYRICS —</span>
+              </div>
+              <div style="font-size:0.92rem;line-height:2.2;color:rgba(241,245,249,0.7);text-align:center">
+                <p style="color:#fb7185;font-weight:600">一次会议红了天边，两道江水抱着城弯。</p>
+                <p>三杯茅台敬远山，四季花开映笑颜。</p>
+                <p style="margin-top:10px;color:#fb7185;font-weight:600">五岭风送茶香远，六弦歌里梦相连。</p>
+                <p>七彩云霞照人间，八方来客都留恋。</p>
+                <p style="margin-top:14px;padding:10px 0;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);color:#f1f5f9;font-weight:700;font-size:0.95rem">数一数，遵义多温暖，<br>山也亲，人也善。<br>茅台香绕旧河湾，梦回家乡心自安。</p>
+                <p style="margin-top:10px;color:#fb7185;font-weight:600">十年百年情如线，千里茶林绿连天。</p>
+                <p>万重云海托青巅，红色记忆在心间。</p>
+                <p style="margin-top:10px">数不尽的情，唱不完的山，</p>
+                <p>乌江浪花醉梦间。</p>
+                <p>一曲苗音绕心弦，</p>
+                <p style="color:#f59e0b;font-weight:600">谁不道——遵义最温暖。</p>
+                <p style="margin-top:14px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);color:#f1f5f9;font-weight:700;font-size:0.95rem">数一数，遵义多温暖，<br>山也亲，人也善。<br>无论漂泊到哪端，故乡在歌里永相伴。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PART 3 HEADER ==================== -->
+    <div class="part-header" id="part3">
+      <div class="part-header-inner">
+        <div class="part-num">3</div>
+        <div class="part-header-text">
+          <div class="part-title">全球知名AI大模型产品</div>
+          <div class="part-meta">第三部分 · 约30分钟 · 14款主流产品全景介绍</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.1 什么是大模型 -->
+    <section id="s31" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">3.1</div>
+          <div class="section-title-wrap">
+            <h2>什么是大模型</h2>
+            <p class="section-desc">读过天下所有书的超级AI大脑</p>
+          </div>
+        </div>
+
+        <div class="fade-in" style="margin-bottom:20px">
+          <div class="case-card-img-wrap landscape" style="margin:0 auto;max-width:800px"><img src="assets/cases/llm-concept.png" alt="大模型概念图" style="width:100%;height:auto;border-radius:12px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)"></div>
+        </div>
+
+        <div class="cards-grid cards-grid-2 fade-in">
+          <div class="card card-accent-top">
+            <div class="card-icon">🧠</div>
+            <div class="card-title">大模型的定义</div>
+            <div class="card-body">
+              <p>大模型（Large Language Model, LLM）是使用海量数据训练的超大规模AI神经网络。为什么叫"大"？参数量巨大——GPT-4估计超<strong style="color:var(--accent-blue)">1万亿</strong>参数。</p>
+              <div class="quote-box" style="margin-top:12px">
+                <p>如果一个参数是一个脑细胞，人脑有860亿神经元，GPT-4的"脑细胞"数量是人脑的<strong>10倍以上</strong>。</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card" style="border-top:3px solid var(--success);margin-bottom:12px">
+              <div class="card-title" style="color:var(--success)">✅ 大模型能做的事</div>
+              <div class="card-body">
+                <ul>
+                  <li>文字创作、翻译、写作、摘要</li>
+                  <li>编程开发、代码审查</li>
+                  <li>数据分析、报告生成</li>
+                  <li>图像识别与理解</li>
+                  <li>多语言处理</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card" style="border-top:3px solid var(--warning)">
+              <div class="card-title" style="color:var(--warning)">⚠️ 大模型的局限</div>
+              <div class="card-body">
+                <ul>
+                  <li>不能真正"理解"含义（"鹦鹉学舌"）</li>
+                  <li>不拥有真实情感</li>
+                  <li>不能保证100%正确（存在"幻觉"）</li>
+                  <li>无法真正进行创造性突破</li>
+                  <li>知识有截止日期</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.2 产品分类 -->
+    <section id="s32" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">3.2</div>
+          <div class="section-title-wrap">
+            <h2>大模型产品分类</h2>
+            <p class="section-desc">14款主流产品——通用对话、视频生成、图像生成、行业专用</p>
+          </div>
+        </div>
+
+        <div class="model-filters fade-in">
+          <button class="filter-btn active" onclick="filterModels('all', this)">全部 (14)</button>
+          <button class="filter-btn" onclick="filterModels('chat', this)">💬 通用对话 (7)</button>
+          <button class="filter-btn" onclick="filterModels('video', this)">🎬 视频生成 (3)</button>
+          <button class="filter-btn" onclick="filterModels('image', this)">🎨 图像生成 (3)</button>
+          <button class="filter-btn" onclick="filterModels('industry', this)">🏭 行业专用 (1)</button>
+        </div>
+
+        <div class="model-grid fade-in">
+          <!-- DeepSeek -->
+          <div class="model-card" data-cat="chat">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#e8f0ff,#c7d7ff);color:#2563eb;font-size:14px;font-weight:900">DS</div>
+              <div>
+                <div class="model-name">DeepSeek</div>
+                <div class="model-company">深度求索 · 中国 🇨🇳</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>训练成本仅约<strong>560万美元</strong></li>
+                <li>性能比肩GPT-4</li>
+                <li>完全<strong>开源</strong>免费</li>
+                <li>R1推理模型展示思考过程</li>
+                <li>政务应用首选低成本方案</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-blue">💬 对话</span><span class="badge badge-green">开源</span></div>
+            </div>
+          </div>
+          <!-- ChatGPT -->
+          <div class="model-card" data-cat="chat">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);color:#059669;font-size:16px">🤖</div>
+              <div>
+                <div class="model-name">ChatGPT</div>
+                <div class="model-company">OpenAI · 美国 🇺🇸</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>全球用户超<strong>3亿</strong></li>
+                <li>GPT-4o多模态，o1推理模型</li>
+                <li>深度研究功能：自主搜索分析</li>
+                <li>能通过律师资格、医师等专业考试</li>
+                <li>高级功能需要付费</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-blue">💬 对话</span><span class="badge badge-cyan">多模态</span></div>
+            </div>
+          </div>
+          <!-- Gemini -->
+          <div class="model-card" data-cat="chat">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#fef3c7,#fde68a);color:#d97706;font-size:16px">G</div>
+              <div>
+                <div class="model-name">Gemini</div>
+                <div class="model-company">Google DeepMind · 美国 🇺🇸</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li><strong>超长上下文</strong>：200万词（相当于15本书）</li>
+                <li>多模态之王：文本/图像/音频/视频</li>
+                <li>唯一可处理<strong>视频上传分析</strong>的主流AI</li>
+                <li>深度集成Google生态（搜索/邮件）</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-blue">💬 对话</span><span class="badge badge-cyan">多模态</span></div>
+            </div>
+          </div>
+          <!-- Claude -->
+          <div class="model-card" data-cat="chat">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);color:#db2777;font-size:16px">C</div>
+              <div>
+                <div class="model-name">Claude</div>
+                <div class="model-company">Anthropic · 美国 🇺🇸</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>以<strong>安全性</strong>和"负责任AI"著称</li>
+                <li>可处理<strong>20万字</strong>超长文档</li>
+                <li>擅长：政策分析、法律合规审查</li>
+                <li>代码编写能力突出</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-blue">💬 对话</span><span class="badge badge-orange">长文本</span></div>
+            </div>
+          </div>
+          <!-- 文心一言 -->
+          <div class="model-card" data-cat="chat">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);color:#1d4ed8;font-size:14px;font-weight:900">文心</div>
+              <div>
+                <div class="model-name">文心一言</div>
+                <div class="model-company">百度 · 中国 🇨🇳</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>中文能力最强大模型之一</li>
+                <li>深度融合<strong>百度搜索</strong>生态</li>
+                <li>应用：智能客服、内容创作</li>
+                <li>企业办公、知识管理</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-blue">💬 对话</span><span class="badge badge-green">中文优化</span></div>
+            </div>
+          </div>
+          <!-- 通义千问 -->
+          <div class="model-card" data-cat="chat">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);color:#059669;font-size:13px;font-weight:900">通义</div>
+              <div>
+                <div class="model-name">通义千问</div>
+                <div class="model-company">阿里云 · 中国 🇨🇳</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>全方位<strong>开源生态</strong>，模型种类丰富</li>
+                <li>多个政务平台已采用</li>
+                <li>多模态能力强，支持文档理解</li>
+                <li>云端部署与私有化部署均支持</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-blue">💬 对话</span><span class="badge badge-green">开源</span></div>
+            </div>
+          </div>
+          <!-- 豆包 -->
+          <div class="model-card" data-cat="chat">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#fef9c3,#fef08a);color:#ca8a04;font-size:18px">🫘</div>
+              <div>
+                <div class="model-name">豆包</div>
+                <div class="model-company">字节跳动 · 中国 🇨🇳</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>日常助手型AI，<strong>轻量化</strong>设计</li>
+                <li>与抖音生态深度集成</li>
+                <li>适合内容创作、日常问答</li>
+                <li>移动端体验优秀</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-blue">💬 对话</span><span class="badge badge-cyan">轻量级</span></div>
+            </div>
+          </div>
+          <!-- Seedance -->
+          <div class="model-card" data-cat="video">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);color:#7c3aed;font-size:16px">🎬</div>
+              <div>
+                <div class="model-name">Seedance 2.0</div>
+                <div class="model-company">字节跳动 · 中国 🇨🇳</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>最新一代<strong>多模态音视频</strong>联合生成</li>
+                <li>支持文字/图片/音频/视频四种输入</li>
+                <li>输出<strong>15秒</strong>高质量多镜头音视频</li>
+                <li>双声道立体声音频</li>
+                <li>场景：广告、影视特效、游戏动画</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-orange">🎬 视频</span><span class="badge badge-cyan">音视频</span></div>
+            </div>
+          </div>
+          <!-- Sora -->
+          <div class="model-card" data-cat="video">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);color:#059669;font-size:16px">🎥</div>
+              <div>
+                <div class="model-name">Sora</div>
+                <div class="model-company">OpenAI · 美国 🇺🇸</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>AI视频生成的<strong>先驱</strong></li>
+                <li>能理解物理世界的运动规律</li>
+                <li>可生成逼真的场景和人物运动</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-orange">🎬 视频</span></div>
+            </div>
+          </div>
+          <!-- 可灵 -->
+          <div class="model-card" data-cat="video">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);color:#db2777;font-size:16px">✨</div>
+              <div>
+                <div class="model-name">可灵</div>
+                <div class="model-company">快手 · 中国 🇨🇳</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>国产视频生成<strong>标杆</strong></li>
+                <li>支持图生视频、文生视频</li>
+                <li>适合短视频内容创作</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-orange">🎬 视频</span><span class="badge badge-green">国产</span></div>
+            </div>
+          </div>
+          <!-- Midjourney -->
+          <div class="model-card" data-cat="image">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe);color:#0284c7;font-size:16px">🎨</div>
+              <div>
+                <div class="model-name">Midjourney</div>
+                <div class="model-company">Midjourney · 美国 🇺🇸</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>艺术风格图像生成<strong>领导者</strong></li>
+                <li>擅长高质量插画和概念设计</li>
+                <li>通过Discord使用</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-red">🎨 图像</span></div>
+            </div>
+          </div>
+          <!-- DALL-E 3 -->
+          <div class="model-card" data-cat="image">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);color:#059669;font-size:16px">🖼️</div>
+              <div>
+                <div class="model-name">DALL-E 3</div>
+                <div class="model-company">OpenAI · 美国 🇺🇸</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>精准遵循文字描述生成图像</li>
+                <li>与ChatGPT<strong>深度集成</strong></li>
+                <li>可在对话中直接生成图像</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-red">🎨 图像</span></div>
+            </div>
+          </div>
+          <!-- Imagen 3 -->
+          <div class="model-card" data-cat="image">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#fef3c7,#fde68a);color:#d97706;font-size:16px">🌅</div>
+              <div>
+                <div class="model-name">Imagen 3</div>
+                <div class="model-company">Google · 美国 🇺🇸</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>画面连贯性和艺术感出色</li>
+                <li>与<strong>Gemini</strong>集成使用</li>
+                <li>支持精细的风格控制</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-red">🎨 图像</span></div>
+            </div>
+          </div>
+          <!-- 华为盘古 -->
+          <div class="model-card" data-cat="industry">
+            <div class="model-card-top">
+              <div class="model-logo" style="background:linear-gradient(135deg,#fee2e2,#fecaca);color:#dc2626;font-size:14px;font-weight:900">盘古</div>
+              <div>
+                <div class="model-name">华为盘古大模型</div>
+                <div class="model-company">华为 · 中国 🇨🇳</div>
+              </div>
+            </div>
+            <div class="model-features">
+              <ul>
+                <li>"<strong>AI for Industries</strong>"理念</li>
+                <li>五大方向：NLP/CV/多模态/预测/科学计算</li>
+                <li>政务Thinking大模型：公文智能生成</li>
+                <li>材料整理、审批辅助、政策研判</li>
+                <li>与电解铝企业联合研发预测模型</li>
+              </ul>
+              <div class="badges-row"><span class="badge badge-orange">🏭 行业</span><span class="badge badge-green">政务AI</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI应用示例 -->
+    <section id="s32b" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">AI</div>
+          <div class="section-title-wrap">
+            <h2>AI应用示例</h2>
+            <p class="section-desc">用真实案例感受大模型的创造力</p>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="quote-box" style="margin-bottom:18px">
+            <p>大模型不仅能写文章、编代码，还能<strong>"看懂"视频、"生成"动作</strong>。下面这个视频展示了AI大模型生成的踢足球场景——AI已经能够理解复杂的物理运动、人体姿态和场景交互，这正是多模态大模型能力的生动体现。</p>
+          </div>
+
+          <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
+            <!-- 视频卡片 -->
+            <div style="flex:1;min-width:300px">
+              <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border-light);box-shadow:var(--shadow-md);background:#000">
+                <video controls playsinline preload="metadata" style="width:100%;display:block;max-height:480px;object-fit:contain">
+                  <source src="assets/cases/tizuqiu-video-h264.mp4" type="video/mp4">
+                  您的浏览器不支持视频播放。
+                </video>
+                <div style="padding:10px 14px;background:var(--bg-card);font-size:12px;color:var(--text-muted);text-align:center">🎬 AI生成的踢足球场景 — 感受多模态大模型的创造力</div>
+              </div>
+            </div>
+
+            <!-- 右侧解读 -->
+            <div style="flex:1;min-width:280px">
+              <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:12px;border-left:4px solid #f59e0b;padding-left:12px">🔍 视频背后的AI能力</h4>
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div class="info-box">
+                  <div class="info-box-title">🎬 视频生成（Text-to-Video）</div>
+                  <p>通过文字描述生成逼真视频场景，包含人物动作、光影、物理运动等</p>
+                </div>
+                <div class="info-box">
+                  <div class="info-box-title">🧠 场景理解</div>
+                  <p>AI能理解“踢足球”概念：包含球场、球员、射门、守门员等复杂元素的协同运动</p>
+                </div>
+                <div class="info-box">
+                  <div class="info-box-title">🎯 政务应用前景</div>
+                  <p>未来可用于政策宣传视频、城市仿真、应急演练模拟、文旅推广等场景</p>
+                </div>
+              </div>
+              <div class="quote-box" style="margin-top:12px;background:rgba(245,158,11,0.08);border-left-color:#f59e0b">
+                <p><strong>💡 思考：</strong>如果遵义要做一条“遵义文旅宣传视频”，AI能否自动生成？请看下面的示例——</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 遵义文旅AI视频示例 -->
+          <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border-light)">
+            <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:14px;border-left:4px solid #f59e0b;padding-left:12px">🌍 AI生成的遵义文旅宣传视频</h4>
+            <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border-light);box-shadow:var(--shadow-md);background:#000;max-width:720px">
+              <video controls playsinline preload="metadata" style="width:100%;display:block;max-height:480px;object-fit:contain">
+                <source src="assets/cases/zunyi-wenlu.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+              </video>
+              <div style="padding:10px 14px;background:var(--bg-card);font-size:12px;color:var(--text-muted);text-align:center">🎬 AI生成的遵义文旅宣传视频 — 这就是大模型多模态能力的真实应用</div>
+            </div>
+            <div class="info-box" style="margin-top:14px;max-width:720px;background:rgba(245,158,11,0.08);border-left:4px solid #f59e0b">
+              <div class="info-box-title">🎯 这条视频说明了什么？</div>
+              <p style="font-size:13px;line-height:1.8">AI已经能够生成包含遵义特色景观、文化元素的宣传视频。未来政务人员只需输入几句描述，AI就能自动生成专业级别的文旅宣传片、政策解读视频、城市形象宣传片等。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.3 DeepSeek专题 -->
+    <section id="s33" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">3.3</div>
+          <div class="section-title-wrap">
+            <h2>DeepSeek专题</h2>
+            <p class="section-desc">为什么DeepSeek震动了全球AI行业</p>
+          </div>
+        </div>
+
+        <div class="cards-grid cards-grid-2 fade-in">
+          <div>
+            <div class="card card-accent-top" style="margin-bottom:14px">
+              <div class="card-icon">💰</div>
+              <div class="card-title">训练成本颠覆认知</div>
+              <div class="card-body">
+                <div class="cards-grid cards-grid-2" style="gap:10px;margin-bottom:10px">
+                  <div class="stat-card"><div class="stat-num" style="font-size:1.8rem">$560万</div><div class="stat-label">DeepSeek-R1<br>训练成本</div></div>
+                  <div class="stat-card"><div class="stat-num" style="font-size:1.8rem;color:#dc2626">$1亿+</div><div class="stat-label">其他头部模型<br>训练成本</div></div>
+                </div>
+                <div class="quote-box">
+                  <p>如果GPT-4是<strong>"劳斯莱斯"</strong>，DeepSeek就是<strong>"性价比之王"</strong>——以1/20的成本达到同等性能。</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accent-top">
+              <div class="card-icon">🌍</div>
+              <div class="card-title">对政务AI的意义</div>
+              <div class="card-body">
+                <ul>
+                  <li><strong>降低门槛</strong>：低成本让县市级政府也能用上强大AI</li>
+                  <li><strong>开源赋能</strong>：可以基于DeepSeek进行私有化部署，保障数据安全</li>
+                  <li><strong>国产替代</strong>：减少对国外AI的依赖</li>
+                  <li>贵州省"小贵"等已采用DeepSeek底层模型</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card card-accent-top">
+              <div class="card-icon">⚡</div>
+              <div class="card-title">为什么轰动全球</div>
+              <div class="card-body">
+                <div class="info-box" style="margin-bottom:10px">
+                  <div class="info-box-title">🎯 性能</div>
+                  <p>在多项国际基准测试中，DeepSeek-R1的得分比肩甚至超越GPT-4</p>
+                </div>
+                <div class="info-box" style="margin-bottom:10px">
+                  <div class="info-box-title">🔓 开源</div>
+                  <p>完全开源，任何人、任何机构都可以免费下载、使用、修改、再分发</p>
+                </div>
+                <div class="info-box" style="margin-bottom:10px">
+                  <div class="info-box-title">🤔 推理透明</div>
+                  <p>R1模型会展示自己的思考过程（Chain of Thought），像"会思考的AI"</p>
+                </div>
+                <div class="info-box">
+                  <div class="info-box-title">🏭 国内算力</div>
+                  <p>在美国芯片出口限制下，用国产算力和创新算法实现了突破，被誉为"鲶鱼效应"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.4 发展趋势 -->
+    <section id="s34" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">3.4</div>
+          <div class="section-title-wrap">
+            <h2>大模型发展趋势</h2>
+            <p class="section-desc">AI产业的五大演进方向</p>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px" class="fade-in">
+          <div class="trend-card">
+            <div class="trend-num">1</div>
+            <div class="trend-content">
+              <div class="trend-title">从通用到垂直：行业大模型成为主流</div>
+              <div class="trend-desc">通用大模型解决"能用"的问题，行业大模型解决"好用"的问题。政务大模型、医疗大模型、法律大模型将成为未来主战场。</div>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div class="trend-num">2</div>
+            <div class="trend-content">
+              <div class="trend-title">从单模态到多模态：AI能看、能听、能说、能创作</div>
+              <div class="trend-desc">早期AI只能处理文字，现在能同时处理文本、图像、音频、视频。Seedance 2.0实现了音视频联合生成，未来政务汇报、政策宣传都将借助AI多模态能力。</div>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div class="trend-num">3</div>
+            <div class="trend-content">
+              <div class="trend-title">从云端到边缘：手机也能运行大模型</div>
+              <div class="trend-desc">大模型正在向手机、平板等边缘设备下沉，实现本地推理。这意味着未来政务人员可以在断网环境下使用AI辅助工作，数据不出设备，安全性更高。</div>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div class="trend-num">4</div>
+            <div class="trend-content">
+              <div class="trend-title">开源生态蓬勃发展：AI民主化加速</div>
+              <div class="trend-desc">DeepSeek、Meta的Llama、阿里的通义千问等开源大模型，让中小机构也能平等享用顶级AI能力。政府可以基于开源模型进行私有化部署，既降低成本又保障数据安全。</div>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div class="trend-num">5</div>
+            <div class="trend-content">
+              <div class="trend-title">中国AI加速追赶：从跟跑到并跑</div>
+              <div class="trend-desc">DeepSeek的横空出世是中国AI力量的重要体现。在算力受限的条件下，中国AI工程师用算法创新实现了"弯道超车"。贵州的算力基础设施优势，将成为未来AI竞争的重要筹码。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.5 大模型训练及优化 -->
+    <section id="s35" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">3.5</div>
+          <div class="section-title-wrap">
+            <h2>大模型训练及优化</h2>
+            <p class="section-desc">从"生才"到"专家"——让大模型变得更智能的主流技术</p>
+          </div>
+        </div>
+
+        <!-- 总览类比 -->
+        <div class="fade-in">
+          <div class="quote-box" style="margin-bottom:20px">
+            <p>大模型就像一个<strong>"天才少年"</strong>，天生聪明但还不够专业。通过不同阶段的"培养"——<strong>预训练、微调、对齐、压缩</strong>——才能让他成为可以上岗的"政务专家"。</p>
+          </div>
+
+          <!-- 训练流程图 -->
+          <div style="display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;margin-bottom:24px;padding:16px;background:var(--bg-card);border-radius:12px;border:1px solid var(--border-light)">
+            <div style="text-align:center;padding:12px 18px">
+              <div style="font-size:28px">📚</div>
+              <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-top:4px">预训练</div>
+              <div style="font-size:11px;color:var(--text-muted)">“博览群书”</div>
+            </div>
+            <div style="font-size:20px;color:var(--text-muted)">→</div>
+            <div style="text-align:center;padding:12px 18px">
+              <div style="font-size:28px">🎯</div>
+              <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-top:4px">微调</div>
+              <div style="font-size:11px;color:var(--text-muted)">“专业课程”</div>
+            </div>
+            <div style="font-size:20px;color:var(--text-muted)">→</div>
+            <div style="text-align:center;padding:12px 18px">
+              <div style="font-size:28px">🤝</div>
+              <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-top:4px">对齐</div>
+              <div style="font-size:11px;color:var(--text-muted)">“规矩礼仪”</div>
+            </div>
+            <div style="font-size:20px;color:var(--text-muted)">→</div>
+            <div style="text-align:center;padding:12px 18px">
+              <div style="font-size:28px">📦</div>
+              <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-top:4px">压缩部署</div>
+              <div style="font-size:11px;color:var(--text-muted)">“轻装上阵”</div>
+            </div>
+          </div>
+
+          <!-- 六大技术详解 -->
+          <div class="cards-grid cards-grid-2" style="margin-bottom:16px">
+            <div class="card card-accent-top">
+              <div class="card-icon">📚</div>
+              <div class="card-title">预训练（Pre-training）</div>
+              <div class="card-subtitle">“读万卷书”——建立基础能力</div>
+              <div class="card-body">
+                <div class="case-card-img-wrap" style="margin:0 0 10px"><img src="assets/cases/pretraining.png" alt="预训练" style="max-width:100%;height:auto;border-radius:8px;border:1px solid var(--border-light)"></div>
+                <p>让模型阅读海量文本（数万亿字），学习语言规律和世界知识。</p>
+                <div class="badges-row" style="margin-top:8px">
+                  <span class="badge badge-blue">类比：小孩上学读完所有教科书</span>
+                </div>
+                <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;line-height:1.9;margin-top:8px">
+                  <li>数据规模：通常需要几TB到几十TB的训练数据</li>
+                  <li>计算量：数千张GPU运行数周到数月</li>
+                  <li>成本：数百万到数千万美元</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card card-accent-top">
+              <div class="card-icon">🎯</div>
+              <div class="card-title">微调（Fine-tuning）</div>
+              <div class="card-subtitle">“专项训练”——让通才变专家</div>
+              <div class="card-body">
+                <div class="case-card-img-wrap" style="margin:0 0 10px"><img src="assets/cases/finetuning.png" alt="微调" style="max-width:100%;height:auto;border-radius:8px;border:1px solid var(--border-light)"></div>
+                <p>用特定领域的数据（如政务文件、法律条文）进一步训练，让模型成为某个领域的专家。</p>
+                <div class="badges-row" style="margin-top:8px">
+                  <span class="badge badge-green">类比：医学生去医院实习</span>
+                </div>
+                <h5 style="font-size:13px;font-weight:700;margin-top:10px;margin-bottom:4px">主流微调方法：</h5>
+                <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;line-height:1.9">
+                  <li><strong>全参数微调</strong>：调整所有参数，效果最好但成本最高</li>
+                  <li><strong>LoRA / QLoRA</strong>：只调整少量参数，成本降低90%，效果接近</li>
+                  <li><strong>Adapter</strong>：在模型中插入小型适配器，灵活切换不同任务</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-grid cards-grid-2" style="margin-bottom:16px">
+            <div class="card card-accent-top">
+              <div class="card-icon">🤝</div>
+              <div class="card-title">RLHF 人类反馈强化学习</div>
+              <div class="card-subtitle">“规矩礼仪课”——让AI“听话”又“安全”</div>
+              <div class="card-body">
+                <div class="case-card-img-wrap" style="margin:0 0 10px"><img src="assets/cases/rlhf.png" alt="RLHF" style="max-width:100%;height:auto;border-radius:8px;border:1px solid var(--border-light)"></div>
+                <p>让人类评判AI的回答好坏，AI根据反馈不断改进。ChatGPT的“好用”就归功于此。</p>
+                <div class="badges-row" style="margin-top:8px">
+                  <span class="badge badge-purple">类比：老师批改作业，学生根据分数改进</span>
+                </div>
+                <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;line-height:1.9;margin-top:8px">
+                  <li><strong>奖励模型</strong>：根据人类偏好训练“评分器”</li>
+                  <li><strong>PPO算法</strong>：用奖励信号优化模型回答质量</li>
+                  <li><strong>DPO算法</strong>：DeepSeek采用的更高效方法，省去奖励模型</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card card-accent-top">
+              <div class="card-icon">📦</div>
+              <div class="card-title">模型压缩与部署</div>
+              <div class="card-subtitle">“轻装上阵”——让大模型变“小”变“快”</div>
+              <div class="card-body">
+                <div class="case-card-img-wrap" style="margin:0 0 10px"><img src="assets/cases/compression.png" alt="模型压缩" style="max-width:100%;height:auto;border-radius:8px;border:1px solid var(--border-light)"></div>
+                <p>大模型往往太大、太慢，需要“瘦身”后才能在实际场景中部署。</p>
+                <div class="badges-row" style="margin-top:8px">
+                  <span class="badge badge-orange">类比：把百科全书压缩成口袋手册</span>
+                </div>
+                <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;line-height:1.9;margin-top:8px">
+                  <li><strong>量化（Quantization）</strong>：降低数字精度，模型大小可减小75%</li>
+                  <li><strong>知识蒸馏（Distillation）</strong>：用大模型教小模型，“师父教徒弟”</li>
+                  <li><strong>剪枝（Pruning）</strong>：去掉不重要的神经元，“精简机构”</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- RAG专项介绍 - 优化布局 -->
+          <div class="fade-in" style="margin-bottom:20px">
+            <div style="background:linear-gradient(135deg,#eff6ff 0%,#f0f4fa 100%);border-radius:16px;overflow:hidden;border:1px solid var(--border-blue);box-shadow:var(--shadow-md)">
+              <!-- 顶部标题栏 -->
+              <div style="background:linear-gradient(135deg,var(--accent-blue-dark),var(--accent-blue));padding:18px 24px;display:flex;align-items:center;gap:12px">
+                <span style="font-size:28px">🔍</span>
+                <div>
+                  <div style="font-size:1.15rem;font-weight:800;color:#fff">RAG 检索增强生成</div>
+                  <div style="font-size:0.82rem;color:rgba(255,255,255,0.8);margin-top:2px">“开卷考试” —— 让大模型随时查资料再回答</div>
+                </div>
+              </div>
+              <!-- 内容区域 -->
+              <div style="padding:20px 24px">
+                <!-- 上部：图片 + 核心说明并排 -->
+                <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;margin-bottom:18px">
+                  <div style="flex:0 0 auto;max-width:300px;width:100%">
+                    <img src="assets/cases/rag-concept.png" alt="RAG检索增强生成" style="width:100%;height:auto;border-radius:12px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)">
+                  </div>
+                  <div style="flex:1;min-width:240px">
+                    <p style="font-size:0.95rem;line-height:1.9;margin-bottom:12px">不需要重新训练模型，只需要在回答时让AI<strong>先检索相关文档，再结合文档内容回答</strong>。这是政务AI最常用的技术。</p>
+                    <div class="quote-box" style="margin:0;background:rgba(37,99,235,0.06);border-left-color:var(--accent-blue)">
+                      <p style="font-size:0.88rem">💡 类比：就像你考试时可以翻书 —— <strong>不需要所有知识都记在脑子里</strong>，只要知道去哪里找答案。</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- RAG工作流程图 -->
+                <div style="display:flex;justify-content:center;gap:0;flex-wrap:wrap;margin-bottom:18px;padding:14px;background:#fff;border-radius:12px;border:1px solid var(--border-light)">
+                  <div style="text-align:center;padding:8px 14px">
+                    <div style="width:46px;height:46px;border-radius:50%;background:var(--accent-gradient);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:18px;font-weight:700">1</div>
+                    <div style="font-size:0.82rem;font-weight:700;color:var(--text-primary)">用户提问</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted)">“某项政策的办理条件？”</div>
+                  </div>
+                  <div style="display:flex;align-items:center;color:var(--accent-blue);font-size:22px;padding:0 2px">→</div>
+                  <div style="text-align:center;padding:8px 14px">
+                    <div style="width:46px;height:46px;border-radius:50%;background:var(--accent-gradient);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:18px;font-weight:700">2</div>
+                    <div style="font-size:0.82rem;font-weight:700;color:var(--text-primary)">检索文档</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted)">从政策库中找到相关段落</div>
+                  </div>
+                  <div style="display:flex;align-items:center;color:var(--accent-blue);font-size:22px;padding:0 2px">→</div>
+                  <div style="text-align:center;padding:8px 14px">
+                    <div style="width:46px;height:46px;border-radius:50%;background:var(--accent-gradient);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:18px;font-weight:700">3</div>
+                    <div style="font-size:0.82rem;font-weight:700;color:var(--text-primary)">组合生成</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted)">AI结合文档内容回答</div>
+                  </div>
+                  <div style="display:flex;align-items:center;color:var(--accent-blue);font-size:22px;padding:0 2px">→</div>
+                  <div style="text-align:center;padding:8px 14px">
+                    <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#10b981,#059669);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:18px">✓</div>
+                    <div style="font-size:0.82rem;font-weight:700;color:var(--text-primary)">精准回答</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted)">有据可查，可追溯来源</div>
+                  </div>
+                </div>
+                <!-- 政务场景应用四宫格 -->
+                <h5 style="font-size:0.88rem;font-weight:700;margin-bottom:10px;color:var(--accent-blue-dark)">📋 政务场景应用</h5>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+                  <div style="background:#fff;border-radius:10px;padding:12px 14px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)">
+                    <div style="font-size:0.88rem;font-weight:700;margin-bottom:4px">📜 政策查询</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);line-height:1.7">连接政策文件库，精准回答政策问题</div>
+                  </div>
+                  <div style="background:#fff;border-radius:10px;padding:12px 14px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)">
+                    <div style="font-size:0.88rem;font-weight:700;margin-bottom:4px">📝 办事指南</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);line-height:1.7">检索办事流程文档，提供步骤引导</div>
+                  </div>
+                  <div style="background:#fff;border-radius:10px;padding:12px 14px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)">
+                    <div style="font-size:0.88rem;font-weight:700;margin-bottom:4px">⚖️ 法律咨询</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);line-height:1.7">连接法律法规库，给出有依据的回答</div>
+                  </div>
+                  <div style="background:#fff;border-radius:10px;padding:12px 14px;border:1px solid var(--border-light);box-shadow:var(--shadow-sm)">
+                    <div style="font-size:0.88rem;font-weight:700;margin-bottom:4px">🗂️ 知识管理</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);line-height:1.7">对接单位内部文档，成为“组织记忆”</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 技术对比表 -->
+          <div class="fade-in" style="margin-top:10px">
+            <h3 style="font-size:1.05rem;font-weight:800;color:var(--text-primary);margin-bottom:12px;border-left:4px solid var(--accent-blue);padding-left:12px">主流训练优化技术对比</h3>
+            <div class="goal-table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>技术</th>
+                    <th>比喻</th>
+                    <th>核心作用</th>
+                    <th>适用场景</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>预训练</strong></td><td>读完所有书</td><td>建立基础能力</td><td>新模型从零开始</td></tr>
+                  <tr><td><strong>全参数微调</strong></td><td>进入专业学院</td><td>领域专精</td><td>资源充裕、追求极致效果</td></tr>
+                  <tr><td><strong>LoRA/QLoRA</strong></td><td>给学生加小课</td><td>低成本微调</td><td>政务场景常用，性价比高</td></tr>
+                  <tr><td><strong>RLHF/DPO</strong></td><td>老师批改作业</td><td>对齐人类偏好</td><td>提升回答质量和安全性</td></tr>
+                  <tr><td><strong>RAG</strong></td><td>开卷考试</td><td>检索+生成</td><td>政务最常用，不需重新训练</td></tr>
+                  <tr><td><strong>量化/蒸馏</strong></td><td>瘦身+带徒弟</td><td>压缩部署</td><td>边缘设备、成本敏感场景</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 政务场景建议 -->
+          <div class="info-box fade-in" style="margin-top:16px;background:rgba(37,99,235,0.08);border-left:4px solid var(--accent-blue)">
+            <div class="info-box-title" style="color:var(--accent-blue)">💡 政务AI选型建议</div>
+            <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px">
+              <div style="flex:1;min-width:200px">
+                <p style="font-size:13px;line-height:1.8"><strong>“快速落地”型：</strong><br>RAG + 开源模型（如DeepSeek），不需要训练，几周即可上线。适合政策查询、办事指南等场景。</p>
+              </div>
+              <div style="flex:1;min-width:200px">
+                <p style="font-size:13px;line-height:1.8"><strong>“深度定制”型：</strong><br>LoRA微调 + RLHF对齐，培养专属政务大模型。适合有大量政务数据积累的单位。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PART 4 HEADER ==================== -->
+    <div class="part-header" id="part4">
+      <div class="part-header-inner">
+        <div class="part-num">4</div>
+        <div class="part-header-text">
+          <div class="part-title">政务大模型经典案例</div>
+          <div class="part-meta">第四部分 · 约45分钟 · 全国标杆 + 贵州省级 + 遵义实例</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4.1 全国概况 -->
+    <section id="s41" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">4.1</div>
+          <div class="section-title-wrap">
+            <h2>全国政务AI发展概况</h2>
+            <p class="section-desc">2025年政务AI进入爆发式增长阶段</p>
+          </div>
+        </div>
+
+        <div class="cards-grid cards-grid-4 fade-in">
+          <div class="stat-card"><div class="stat-num">第一</div><div class="stat-label">政务行业大模型<br>中标金额全国排名</div></div>
+          <div class="stat-card"><div class="stat-num" data-count="14">14</div><div class="stat-label">全国标杆案例<br>（规范应用评选）</div></div>
+          <div class="stat-card"><div class="stat-num">北上广深</div><div class="stat-label">领跑城市<br>中西部加速追赶</div></div>
+          <div class="stat-card"><div class="stat-num">智办</div><div class="stat-label">从"可办"到"好办、<br>智办"的升级目标</div></div>
+        </div>
+
+        <div class="info-box fade-in" style="margin-top:16px">
+          <div class="info-box-title">📊 核心趋势</div>
+          <ul>
+            <li>政务AI从"能用"阶段进入"好用、智能用"阶段</li>
+            <li>大模型在政务领域的应用场景快速扩展：审批、问答、分析、决策</li>
+            <li>各地竞相建设政务AI中台，统筹算力资源，避免重复建设</li>
+            <li>"人工智能+"行动推动政务服务从线下走向全天候智能服务</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.2 全国标杆 -->
+    <section id="s42" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">4.2</div>
+          <div class="section-title-wrap">
+            <h2>全国标杆案例</h2>
+            <p class="section-desc">深圳、上海、浙江的政务AI领跑实践</p>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <!-- 深圳深小i -->
+          <div class="case-card" style="margin-bottom:16px">
+            <div class="case-card-header">
+              <div class="case-card-icon">🤖</div>
+              <div class="case-card-title">深圳"深小i" — 全国首个实用型AI政务助手</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap portrait"><img src="assets/cases/shenxiaoi.jpg" alt="深圳深小i AI政务助手" loading="lazy"></div>
+              <div class="case-card-desc">
+                <p style="margin-bottom:10px">2025年2月上线，融入政务服务"问、查、导、办、评"全流程。构建深圳市AI中台，统筹全市AI算力资源，支撑各部门政务AI应用。</p>
+                <div class="cards-grid cards-grid-2">
+                  <div>
+                    <h4 style="font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:8px">七大应用场景</h4>
+                    <ul style="font-size:14px;color:var(--text-secondary);line-height:1.9;padding-left:14px">
+                      <li>① 智能问答</li>
+                      <li>② 边聊边办（对话式办事）</li>
+                      <li>③ 智能辅助申报</li>
+                      <li>④ 智能进度查询</li>
+                      <li>⑤ 智能投诉建议</li>
+                      <li>⑥ 智能政策送达</li>
+                      <li>⑦ "人工+智能"协同</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 style="font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:8px">核心数据</h4>
+                    <div class="cards-grid" style="gap:8px">
+                      <div class="stat-card" style="padding:12px"><div class="stat-num" style="font-size:1.5rem" data-count="270" data-suffix="P">270P</div><div class="stat-label" style="font-size:12px">纳管算力</div></div>
+                      <div class="stat-card" style="padding:12px"><div class="stat-num" style="font-size:1.5rem">9738万</div><div class="stat-label" style="font-size:12px">总调用次数</div></div>
+                      <div class="stat-card" style="padding:12px"><div class="stat-num" style="font-size:1.5rem">167万</div><div class="stat-label" style="font-size:12px">日最高调用量</div></div>
+                      <div class="stat-card" style="padding:12px"><div class="stat-num" style="font-size:1.5rem" data-count="39">39</div><div class="stat-label" style="font-size:12px">部署模型数量</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="case-card-significance">⭐ 意义：构建统一的市级AI中台，实现算力统筹和模型共享，为全国政务AI建设提供"深圳样板"</div>
+            </div>
+          </div>
+
+          <!-- 上海 -->
+          <div class="case-card" style="margin-bottom:16px">
+            <div class="case-card-header">
+              <div class="case-card-icon">🌆</div>
+              <div class="case-card-title">上海"一网通办"AI升级 — 星辰政务大模型赋能</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/xingchen-model.jpg" alt="中国电信星辰政务大模型" loading="lazy"></div>
+              <div class="case-card-desc">
+                "星辰政务"大模型全面赋能上海政务服务平台，实现从"能办"到"智能帮办"的跨越。
+                <ul style="margin-top:8px;padding-left:16px;font-size:14px">
+                  <li>智能预审材料：AI提前审查申请材料完整性，减少退件</li>
+                  <li>智能推荐办事指南：根据用户情况个性化推荐最优办理路径</li>
+                  <li>全程陪伴式服务：从咨询到办结，AI全程引导</li>
+                </ul>
+              </div>
+              <div class="case-card-significance">⭐ 意义：将大模型深度嵌入政务服务全流程，实现服务质量和效率的双重提升</div>
+            </div>
+          </div>
+
+          <!-- 浙江 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">🏔️</div>
+              <div class="case-card-title">浙江"最多跑一次"智能化升级</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap portrait"><img src="assets/cases/zheliban.jpg" alt="浙江政务服务网 浙里办" loading="lazy"></div>
+              <div class="case-card-desc">
+                在"最多跑一次"改革基础上，引入大模型能力，进一步提升政务服务智能化水平。
+                <ul style="margin-top:8px;padding-left:16px;font-size:14px">
+                  <li>AI辅助审批：减少人工判断差异，提升审批一致性</li>
+                  <li>智能客服：24小时响应群众政策咨询</li>
+                  <li>基于大模型的政策"智能问答"：将数千个政策文件转化为可对话的知识库</li>
+                </ul>
+              </div>
+              <div class="case-card-significance">⭐ 意义：在改革领先地区率先引入AI，继续引领全国政务服务创新</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.3 贵州省案例 -->
+    <section id="s43" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">4.3</div>
+          <div class="section-title-wrap">
+            <h2>贵州省级案例</h2>
+            <p class="section-desc">贵州依托算力优势，率先探索政务AI应用</p>
+          </div>
+        </div>
+
+        <div class="cards-grid cards-grid-2 fade-in" style="margin-bottom:20px">
+          <!-- 小贵 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">🤖</div>
+              <div class="case-card-title">智能问政助手"小贵"</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/xiaogui.jpg" alt="贵人智办 AI体验区 智能问政助手小贵" loading="lazy"></div>
+              <div class="case-card-desc">
+                贵州省政府网站集约化平台接入DeepSeek大模型，通过"中国·贵州"APP及微信小程序使用，标志贵州政务服务向智能化迈出重要一步。
+                <ul style="margin-top:8px;padding-left:16px;font-size:14px">
+                  <li>智能问答：能与用户实时对话，解答政策咨询</li>
+                  <li>精准政策解读：将晦涩法规转化为通俗易懂的回答</li>
+                  <li>个性化办事指南：根据用户情况推荐最优路径</li>
+                  <li>快速识别用户意图，关联数据分析</li>
+                </ul>
+              </div>
+              <div class="case-card-significance">⭐ 贵州首款省级政务AI智能助手，基于DeepSeek开源模型构建</div>
+            </div>
+          </div>
+          <!-- 魔树工厂 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">🏭</div>
+              <div class="case-card-title">贵州大数据集团"魔树工厂"</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/moshu-gongchang1.jpg" alt="贵州大数据集团魔树工厂" loading="lazy"></div>
+              <div class="case-card-desc">
+                贵州大数据集团自主研发的AI大模型公共服务平台，构建"数据标注平台+大模型公共服务平台+算力调度平台"全栈方案。
+                <ul style="margin-top:8px;padding-left:16px;font-size:14px">
+                  <li>接入DeepSeek、通义千问、MiniMax等多个大模型</li>
+                  <li><strong>250P</strong>多元混合国产算力</li>
+                  <li>发布：智能问政、政策咨询助手、政务办事小助等</li>
+                  <li>支撑政务服务、基层治理、城运中心等政务大模型底座</li>
+                </ul>
+              </div>
+              <div class="case-card-significance">⭐ 贵州省政务AI统一底座，为全省各级政府提供AI基础服务</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 贵州AI发展目标表格 -->
+        <div class="fade-in">
+          <h3 style="font-size:1.05rem;font-weight:800;color:var(--text-primary);margin-bottom:12px;border-left:4px solid var(--accent-blue);padding-left:12px">贵州省AI发展目标（2025-2027）</h3>
+          <div class="goal-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>年份</th>
+                  <th>⚡ 算力规模</th>
+                  <th>📱 应用场景</th>
+                  <th>💰 AI核心产业</th>
+                  <th>重点领域</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025年</td>
+                  <td><strong style="color:var(--accent-blue)">150 EFLOPS</strong></td>
+                  <td>100+ 场景</td>
+                  <td><strong style="color:var(--accent-blue)">240亿元</strong></td>
+                  <td>酱酒、化工、煤矿、旅游、医疗</td>
+                </tr>
+                <tr>
+                  <td>2026年</td>
+                  <td><strong style="color:var(--accent-blue)">180 EFLOPS</strong></td>
+                  <td>200+ 场景</td>
+                  <td><strong style="color:var(--accent-blue)">290亿元</strong></td>
+                  <td>广电、金融、交通、教育</td>
+                </tr>
+                <tr>
+                  <td>2027年</td>
+                  <td><strong style="color:var(--accent-blue)">210 EFLOPS</strong></td>
+                  <td>500+ 场景</td>
+                  <td><strong style="color:var(--accent-blue)">350亿元</strong></td>
+                  <td>24个重点行业全面覆盖</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.4 遵义市实例 -->
+    <section id="s44" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">4.4</div>
+          <div class="section-title-wrap">
+            <h2>遵义市政务数据应用实例</h2>
+            <p class="section-desc">城市治理 · 公共服务 · 产业发展 — 8大典型应用</p>
+          </div>
+        </div>
+
+        <!-- 城市治理 -->
+        <div class="domain-header fade-in">
+          <div class="domain-icon">🏙️</div>
+          <div class="domain-title">城市治理领域（2个场景）</div>
+        </div>
+
+        <div class="cards-grid cards-grid-2 fade-in">
+          <!-- 视频中台 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">📹</div>
+              <div class="case-card-title">视频中台</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/Shi-Pin-Zhong-Tai.jpg" alt="视频中台"></div>
+              <div class="case-card-desc">
+                综合运用智能算法+无人机+车载巡查，覆盖城市管理、治安防控、公共安全、工矿监管、森林防火五大领域，实现城市全域智能感知与预警处置。
+                <div class="cards-grid" style="gap:8px;margin-top:12px">
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.4rem">8.12万</div><div class="stat-label" style="font-size:12px">处置城管问题（件）</div></div>
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.4rem">1300+</div><div class="stat-label" style="font-size:12px">治安预警次数</div></div>
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.4rem">5起</div><div class="stat-label" style="font-size:12px">公共安全告警</div></div>
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.4rem">50家</div><div class="stat-label" style="font-size:12px">赋能煤矿智能化</div></div>
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.4rem">75万</div><div class="stat-label" style="font-size:12px">森林预警次数</div></div>
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.4rem">424起</div><div class="stat-label" style="font-size:12px">核实火点数量</div></div>
+                </div>
+              </div>
+              <div class="case-card-significance">⭐ 推动城市治理从被动应对向主动防控转型</div>
+            </div>
+          </div>
+
+          <!-- 矛盾风险感知 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">⚖️</div>
+              <div class="case-card-title">矛盾风险感知预警共治平台</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/Mao-Dun-Feng-Xian-Gan-Zhi-Yu-Jing-Gong-Zhi-Ping-Tai-2.jpg" alt="矛盾风险感知预警共治平台"></div>
+              <div class="case-card-desc">
+                汇聚多部门数据，建立社会矛盾风险智能感知和预警体系。具备统计查询、建模分析、态势感知、风险预警四大核心功能。
+                <div class="cards-grid" style="gap:8px;margin-top:12px">
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.2rem">33.79万</div><div class="stat-label" style="font-size:12px">矛盾纠纷信息（条）</div></div>
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.2rem">169.7万</div><div class="stat-label" style="font-size:12px">基础人员信息（条）</div></div>
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.2rem">53.55万</div><div class="stat-label" style="font-size:12px">特殊群体数据（条）</div></div>
+                  <div class="stat-card" style="padding:10px"><div class="stat-num" style="font-size:1.2rem">2459起</div><div class="stat-label" style="font-size:12px">试运行预警风险</div></div>
+                </div>
+              </div>
+              <div class="case-card-significance">⭐ 将矛盾化解从"事后处置"变为"事前预防"</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 公共服务 -->
+        <div class="domain-header fade-in">
+          <div class="domain-icon">🏥</div>
+          <div class="domain-title">公共服务领域（3个场景）</div>
+        </div>
+
+        <div class="cards-grid cards-grid-3 fade-in">
+          <!-- 红黄牌 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">🚦</div>
+              <div class="case-card-title">政务办件"红黄牌"预警监测</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/Zheng-Wu-Ban-Jian-Hong-Huang-Pai-Yu-Jing-Jian-Ce-3.jpg" alt="政务办件红黄牌预警监测"></div>
+              <div class="case-card-desc">
+                建立政务服务超时预警机制，分级监控每一件政务事项的办理时效。
+                <div class="info-box" style="margin:8px 0">
+                  <div class="info-box-title">⏰ 分级预警规则</div>
+                  <ul style="font-size:13px">
+                    <li>1天件：提前<strong>12小时</strong>黄牌</li>
+                    <li>2-5天件：提前<strong>24小时</strong>黄牌</li>
+                    <li>6天以上：提前<strong>48小时</strong>黄牌</li>
+                  </ul>
+                </div>
+                <div class="cards-grid" style="gap:6px">
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem">5000+</div><div class="stat-label" style="font-size:11px">黄牌提醒次数</div></div>
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem">23件</div><div class="stat-label" style="font-size:11px">红牌督办次数</div></div>
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem" style="color:var(--success)">-95%</div><div class="stat-label" style="font-size:11px">超期办件下降</div></div>
+                </div>
+              </div>
+              <div class="case-card-significance">⭐ 超期办件同比下降95%，让政务服务更有时效性</div>
+            </div>
+          </div>
+
+          <!-- 120急救 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">🚑</div>
+              <div class="case-card-title">120急救指挥调度系统</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/Shi-120Ji-Jiu-Zhi-Hui-Diao-Du-Xi-Tong.jpg" alt="市120急救指挥调度系统"></div>
+              <div class="case-card-desc">
+                覆盖全市的智能急救调度平台，整合多渠道报警、高精度定位、智能外呼、动态路径规划等核心能力。
+                <div class="cards-grid" style="gap:6px;margin-top:8px">
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem">284家</div><div class="stat-label" style="font-size:11px">接入医疗机构</div></div>
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem">485辆</div><div class="stat-label" style="font-size:11px">救护车统一调度</div></div>
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem">63万+</div><div class="stat-label" style="font-size:11px">受理急救电话（次）</div></div>
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem">6万+</div><div class="stat-label" style="font-size:11px">救治病人（人）</div></div>
+                </div>
+              </div>
+              <div class="case-card-significance">⭐ 院前应急转运更迅速精准，减少病情延误，守护市民生命安全</div>
+            </div>
+          </div>
+
+          <!-- 森林防火 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">🌲</div>
+              <div class="case-card-title">森林防火监测预警服务平台</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/Sen-Lin-Fang-Huo-Jian-Ce-Yu-Jing-Fu-Wu-Ping-Tai-4.jpg" alt="森林防火监测预警服务平台"></div>
+              <div class="case-card-desc">
+                基于AI算法的智能森林防火体系，实现从被动人工巡查到主动AI预警的转变。
+                <div class="info-box" style="margin:8px 0">
+                  <div class="info-box-title">🔄 智能工作流程</div>
+                  <p style="font-size:13px">前端摄像头AI识别林火特征 → 自动生成预警信息 → 匹配对应处理单位与责任人 → 火情确认后自动切换指挥调度模块</p>
+                </div>
+                <div class="badges-row">
+                  <span class="badge badge-green">AI自动识别</span>
+                  <span class="badge badge-orange">智能预警</span>
+                  <span class="badge badge-blue">联动调度</span>
+                </div>
+              </div>
+              <div class="case-card-significance">⭐ 为火情处置提供智能决策支持，保护遵义绿色生态屏障</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产业发展 -->
+        <div class="domain-header fade-in">
+          <div class="domain-icon">🏭</div>
+          <div class="domain-title">产业发展领域（3个场景）</div>
+        </div>
+
+        <div class="cards-grid cards-grid-3 fade-in">
+          <!-- 草莓 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">🍓</div>
+              <div class="case-card-title">莓悉草莓学习检测大模型</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/Mei-Xi-Cao-Mei-Xue-Xi-Jian-Ce-Da-Mo-Xing-5.jpg" alt="莓悉草莓学习检测大模型"></div>
+              <div class="case-card-desc">
+                基于百度飞桨平台构建的农业AI专用模型，能在复杂环境下精准识别草莓生长状态与病虫害。
+                <div class="info-box" style="margin:8px 0">
+                  <div class="info-box-title">🎯 性能指标</div>
+                  <ul style="font-size:13px">
+                    <li>检测准确率：<strong style="color:var(--accent-blue)">98.2%</strong></li>
+                    <li>单帧推理时间：<strong style="color:var(--accent-blue)">65ms</strong></li>
+                    <li>适应场景：密集果丛、光照变化、枝叶遮挡</li>
+                  </ul>
+                </div>
+                <div class="badges-row">
+                  <span class="badge badge-green">降低人工成本30%+</span>
+                </div>
+              </div>
+              <div class="case-card-significance">⭐ 为草莓植物工厂提供实时品质管控，助力农业数字化转型</div>
+            </div>
+          </div>
+
+          <!-- 白酒 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">🍶</div>
+              <div class="case-card-title">酱香型白酒智能勾调平台</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/Jiang-Xiang-Xing-Bai-Jiu-Zhi-Neng-Gou-Diao-Ping-Tai-6.jpg" alt="酱香型白酒智能勾调平台"></div>
+              <div class="case-card-desc">
+                融合进化算法与深度学习的白酒智能勾调系统，实现白酒风味的精准控制与高效勾调，保障酒体批次品质稳定。
+                <div class="info-box" style="margin:8px 0">
+                  <div class="info-box-title">🔄 转型意义</div>
+                  <ul style="font-size:13px">
+                    <li>从<strong>手工化</strong>→ 智能化</li>
+                    <li>从<strong>经验化</strong>→ 数据化</li>
+                    <li>从<strong>个性化</strong>→ 标准化</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="case-card-significance">⭐ 引领酱香型白酒行业迈入数据智能新时代，赋能遵义核心产业</div>
+            </div>
+          </div>
+
+          <!-- 电解铝 -->
+          <div class="case-card">
+            <div class="case-card-header">
+              <div class="case-card-icon">⚡</div>
+              <div class="case-card-title">电解铝动态优化预测大模型</div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-img-wrap landscape"><img src="assets/cases/Dian-Jie-Lu-Fu-Za-Ti-Xi-Dong-Tai-You-Hua-Yu-Ce-Da-Mo-Xing-7.jpg" alt="电解铝动态优化预测大模型"></div>
+              <div class="case-card-desc">
+                联合华为研发的<strong>国内首个</strong>电解铝复杂电解质体系工艺指标动态优化预测大模型，实现电解铝生产过程的精准控制与节能降耗。
+                <div class="cards-grid" style="gap:6px;margin-top:8px">
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem;color:var(--success)">-200度</div><div class="stat-label" style="font-size:11px">吨铝节电量</div></div>
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem;color:var(--success)">7000万</div><div class="stat-label" style="font-size:11px">年节电（度）</div></div>
+                  <div class="stat-card" style="padding:8px"><div class="stat-num" style="font-size:1.2rem;color:var(--success)">4000万</div><div class="stat-label" style="font-size:11px">年降低电费（元）</div></div>
+                </div>
+              </div>
+              <div class="case-card-significance">⭐ 为传统电解铝生产提供转型升级新路径，年节电7000万度，电费直降4000万元</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.5 展望与思考 -->
+    <section id="s45" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge">4.5</div>
+          <div class="section-title-wrap">
+            <h2>展望与思考</h2>
+            <p class="section-desc">对各部门领导的五条建议 · 共同推进遵义市AI+政务发展</p>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px" class="fade-in">
+          <div class="rec-card">
+            <div class="rec-num">1</div>
+            <div class="rec-text"><strong>主动拥抱AI，不要怕、不要等</strong> — AI不是来取代政府工作人员的，而是赋能工作人员的工具。越早学、越早用，越能抢占先机，越能在新一轮治理变革中掌握主动权。</div>
+          </div>
+          <div class="rec-card">
+            <div class="rec-num">2</div>
+            <div class="rec-text"><strong>从小场景做起，积累经验再扩展</strong> — 不要一开始就谋求"大而全"的系统，选择一个痛点明确、数据相对完整的小场景切入，取得成效后再逐步推广。"红黄牌"预警就是很好的示范。</div>
+          </div>
+          <div class="rec-card">
+            <div class="rec-num">3</div>
+            <div class="rec-text"><strong>重视数据治理，"好数据"才能训练"好AI"</strong> — 数据质量是AI效果的决定性因素。"垃圾进，垃圾出"——在推进AI应用之前，必须先做好数据清洗、标准化和治理工作。</div>
+          </div>
+          <div class="rec-card">
+            <div class="rec-num">4</div>
+            <div class="rec-text"><strong>注重安全合规，保护公民隐私</strong> — 政务数据是最敏感的数据之一，AI应用必须在安全合规框架内进行。可信数据空间、隐私计算等技术就是为了解决这一问题。</div>
+          </div>
+          <div class="rec-card">
+            <div class="rec-num">5</div>
+            <div class="rec-text"><strong>培养AI素养，领导干部带头学习</strong> — 数字化时代，AI素养是领导干部必备能力之一。领导率先学习，才能有效推动部门整体的AI能力建设，引领团队跟上时代步伐。</div>
+          </div>
+        </div>
+
+        <div class="closing-quote fade-in">
+          <p>"人工智能不会取代政府工作人员，<br>但<strong>会用AI的政府工作人员</strong>将取代<strong>不会用AI的政府工作人员</strong>。"</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="site-footer">
+      <div class="footer-logo">遵义市大数据发展管理局</div>
+      <p>人工智能在政务数据开发利用中的应用</p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+/* ========================
+   Hero Canvas Particles
+   ======================== */
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  let raf;
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+
+  function init() {
+    resize();
+    particles = [];
+    const count = Math.min(60, Math.floor(canvas.width / 20));
+    for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 2 + 1,
+          dx: (Math.random() - 0.5) * 0.4,
+          dy: (Math.random() - 0.5) * 0.4,
+          alpha: Math.random() * 0.5 + 0.2
+        });
+      }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(147, 197, 253, ${p.alpha})`;
+      ctx.fill();
+      p.x += p.dx;
+      p.y += p.dy;
+      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+    });
+    raf = requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', () => { resize(); });
+  init();
+  draw();
+})();
+
+/* ========================
+   Toggle Pillar Cards
+   ======================== */
+function togglePillar(id) {
+  const card = document.getElementById(id);
+  if (!card) return;
+  card.classList.toggle('open');
+}
+
+/* ========================
+   Switch Tab (inline onclick)
+   ======================== */
+function switchTab(containerId, paneId, btn) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  // Deactivate all tab buttons in the same nav
+  const nav = btn.closest('.tab-nav');
+  if (nav) nav.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  // Hide all panes, show target
+  container.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById(paneId);
+  if (target) target.classList.add('active');
+}
+
+/* ========================
+   Filter Models (inline onclick)
+   ======================== */
+function filterModels(category, btn) {
+  // Update active button
+  const nav = btn.closest('.model-filters');
+  if (nav) nav.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  // Filter cards
+  document.querySelectorAll('.model-card').forEach(card => {
+    const cat = card.getAttribute('data-cat');
+    if (category === 'all' || cat === category) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+/* ========================
+   Switch Era (AI History Timeline)
+   ======================== */
+var eraPowerMap = {
+  'era-dawn': 15,
+  'era-winter': 25,
+  'era-break': 55,
+  'era-boom': 98
+};
+function switchEra(eraId, btn) {
+  // Update nav buttons
+  document.querySelectorAll('.era-nav-btn').forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  // Switch panels
+  document.querySelectorAll('.era-panel').forEach(function(p) { p.classList.remove('active'); });
+  var panel = document.getElementById(eraId);
+  if (panel) panel.classList.add('active');
+  // Update power bar
+  var fill = document.getElementById('aiPowerFill');
+  if (fill && eraPowerMap[eraId] !== undefined) {
+    fill.style.width = eraPowerMap[eraId] + '%';
+  }
+}
+
+/* ========================
+   Animated Counters
+   ======================== */
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-count') || el.getAttribute('data-target'), 10);
+  const suffix = el.getAttribute('data-suffix') || '';
+  const duration = 1500;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(target * eased).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+/* ========================
+   IntersectionObserver: Fade-in + Counter
+   ======================== */
+const fadeEls = document.querySelectorAll('.fade-in');
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      fadeObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+fadeEls.forEach(el => fadeObs.observe(el));
+
+const counterEls = document.querySelectorAll('[data-count], [data-target]:not([data-pane]):not([data-tab]):not([data-filter])');
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCounter(e.target);
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+counterEls.forEach(el => counterObs.observe(el));
+
+/* ========================
+   Tabs
+   ======================== */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const group = this.closest('.tabs-container');
+    group.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    group.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    this.classList.add('active');
+    const target = this.getAttribute('data-tab');
+    const pane = group.querySelector('[data-pane="' + target + '"]');
+    if (pane) pane.classList.add('active');
+  });
+});
+
+/* ========================
+   Model Filter Tabs
+   ======================== */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const container = this.closest('.model-filter-section');
+    container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.getAttribute('data-filter');
+    container.querySelectorAll('.model-card').forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+/* ========================
+   Expandable Cards
+   ======================== */
+document.querySelectorAll('.expand-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const card = this.closest('.expandable-card');
+    const body = card.querySelector('.expand-body');
+    const isOpen = card.classList.contains('open');
+    card.classList.toggle('open');
+    this.textContent = isOpen ? '展开详情 ▼' : '收起 ▲';
+  });
+});
+
+/* ========================
+   Sidebar Navigation
+   ======================== */
+const sidebarLinks = document.querySelectorAll('.sidebar-link');
+const sections = document.querySelectorAll('section[id], div[id].section-anchor');
+
+function updateActiveNav() {
+  let current = '';
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top <= 80) current = sec.id;
+  });
+  sidebarLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+/* ========================
+   Progress Bar
+   ======================== */
+const progressBar = document.getElementById('progress-bar');
+const sidebarProg = document.getElementById('sidebar-prog');
+const sidebarProgText = document.getElementById('sidebar-prog-text');
+function updateProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
+  if (progressBar) progressBar.style.width = pct + '%';
+  if (sidebarProg) sidebarProg.style.width = pct + '%';
+  if (sidebarProgText) sidebarProgText.textContent = pct + '%';
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+
+/* ========================
+   Hamburger / Mobile Sidebar Toggle
+   ======================== */
+const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('sidebar-overlay');
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+  });
+}
+if (overlay) {
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('active');
+  });
+}
+
+// Close sidebar on link click (mobile)
+sidebarLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 900) {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('active');
+    }
+  });
+});
+
+/* ========================
+   Smooth scroll for anchor links
+   ======================== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 60;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+/* ========================
+   音乐播放器 - 数说遵义
+   ======================== */
+var songAudio, songPlayBtn, songProgress, songCurrentTime, songDuration, vinylDisc, vinylAnimId;
+var songPlaying = false;
+
+function initSongPlayer() {
+  songAudio = document.getElementById('song-audio');
+  songPlayBtn = document.getElementById('song-play-btn');
+  songProgress = document.getElementById('song-progress');
+  songCurrentTime = document.getElementById('song-current-time');
+  songDuration = document.getElementById('song-duration');
+  vinylDisc = document.getElementById('vinyl-disc');
+  if (!songAudio) return;
+
+  songAudio.addEventListener('loadedmetadata', function() {
+    songDuration.textContent = formatSongTime(songAudio.duration);
+  });
+  songAudio.addEventListener('timeupdate', function() {
+    if (songAudio.duration) {
+      var pct = (songAudio.currentTime / songAudio.duration) * 100;
+      songProgress.style.width = pct + '%';
+      songCurrentTime.textContent = formatSongTime(songAudio.currentTime);
+    }
+  });
+  songAudio.addEventListener('ended', function() {
+    songPlaying = false;
+    songPlayBtn.textContent = '\u25b6';
+    songProgress.style.width = '0%';
+    songCurrentTime.textContent = '0:00';
+    stopVinylSpin();
+  });
+}
+
+function formatSongTime(sec) {
+  var m = Math.floor(sec / 60);
+  var s = Math.floor(sec % 60);
+  return m + ':' + (s < 10 ? '0' : '') + s;
+}
+
+function toggleSongPlay() {
+  if (!songAudio) initSongPlayer();
+  if (!songAudio) return;
+  if (songPlaying) {
+    songAudio.pause();
+    songPlayBtn.textContent = '\u25b6';
+    stopVinylSpin();
+  } else {
+    songAudio.play();
+    songPlayBtn.textContent = '\u275a\u275a';
+    startVinylSpin();
+  }
+  songPlaying = !songPlaying;
+}
+
+function seekSong(e) {
+  if (!songAudio) initSongPlayer();
+  if (!songAudio || !songAudio.duration) return;
+  var bar = document.getElementById('song-progress-bar');
+  var rect = bar.getBoundingClientRect();
+  var pct = (e.clientX - rect.left) / rect.width;
+  songAudio.currentTime = pct * songAudio.duration;
+}
+
+function switchSongVersion(ver) {
+  if (!songAudio) initSongPlayer();
+  var wasPlaying = songPlaying;
+  if (songPlaying) {
+    songAudio.pause();
+    songPlaying = false;
+    songPlayBtn.textContent = '\u25b6';
+    stopVinylSpin();
+  }
+  songAudio.src = 'assets/cases/shushuo-zunyi-' + ver + '.mp3';
+  songProgress.style.width = '0%';
+  songCurrentTime.textContent = '0:00';
+  songDuration.textContent = '0:00';
+
+  var btnV1 = document.getElementById('song-btn-v1');
+  var btnV2 = document.getElementById('song-btn-v2');
+  if (ver === 'v1') {
+    btnV1.style.borderColor = 'rgba(225,29,72,0.5)';
+    btnV1.style.background = 'rgba(225,29,72,0.15)';
+    btnV1.style.color = '#fb7185';
+    btnV2.style.borderColor = 'rgba(148,163,184,0.3)';
+    btnV2.style.background = 'rgba(148,163,184,0.08)';
+    btnV2.style.color = '#94a3b8';
+  } else {
+    btnV2.style.borderColor = 'rgba(225,29,72,0.5)';
+    btnV2.style.background = 'rgba(225,29,72,0.15)';
+    btnV2.style.color = '#fb7185';
+    btnV1.style.borderColor = 'rgba(148,163,184,0.3)';
+    btnV1.style.background = 'rgba(148,163,184,0.08)';
+    btnV1.style.color = '#94a3b8';
+  }
+
+  if (wasPlaying) {
+    songAudio.addEventListener('canplay', function onCanPlay() {
+      songAudio.removeEventListener('canplay', onCanPlay);
+      songAudio.play();
+      songPlaying = true;
+      songPlayBtn.textContent = '\u275a\u275a';
+      startVinylSpin();
+    });
+  }
+}
+
+var vinylAngle = 0;
+function startVinylSpin() {
+  if (!vinylDisc) return;
+  function spin() {
+    vinylAngle = (vinylAngle + 0.5) % 360;
+    vinylDisc.style.transform = 'rotate(' + vinylAngle + 'deg)';
+    vinylAnimId = requestAnimationFrame(spin);
+  }
+  spin();
+}
+function stopVinylSpin() {
+  if (vinylAnimId) cancelAnimationFrame(vinylAnimId);
+}
+
+document.addEventListener('DOMContentLoaded', initSongPlayer);
+</script>
+</body>
+</html>
