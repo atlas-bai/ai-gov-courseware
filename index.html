@@ -1593,6 +1593,217 @@ body {
 }
 
 #sidebar-overlay.visible { display: block; }
+
+/* ========================
+   Tech Revolutions Intro
+   ======================== */
+/* Acceleration Bars */
+.rev-acceleration {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.rev-accel-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.rev-accel-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.rev-accel-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.rev-accel-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 100px;
+  align-items: center;
+  gap: 14px;
+}
+@media (max-width: 640px) {
+  .rev-accel-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .rev-accel-track { height: 18px !important; }
+}
+.rev-accel-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.rev-accel-track {
+  height: 24px;
+  background: var(--bg-card-alt);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.rev-accel-fill {
+  height: 100%;
+  border-radius: 12px;
+  width: 0%;
+  min-width: 6px;
+  transition: width 1.5s cubic-bezier(0.22,1,0.36,1);
+}
+.rev-accel-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Revolution Cards Timeline */
+.rev-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rev-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.rev-card:hover {
+  box-shadow: var(--shadow-blue);
+  transform: translateY(-2px);
+}
+.rev-card-highlight {
+  border: 2px solid #ef4444;
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.12), var(--shadow-md);
+}
+.rev-card-highlight:hover {
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.2), var(--shadow-lg);
+}
+@media (max-width: 640px) {
+  .rev-card {
+    grid-template-columns: 1fr;
+  }
+}
+.rev-card-era {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  color: #fff;
+  text-align: center;
+  gap: 6px;
+}
+.rev-card-num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.rev-card-period {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.rev-card-body {
+  padding: 20px;
+  background: var(--bg-card);
+}
+.rev-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.rev-card-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.rev-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.rev-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.rev-card-impact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-light);
+}
+.rev-impact-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.rev-impact-val {
+  font-size: 13px;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+/* Insights */
+.rev-insight-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* Transition Box */
+.rev-transition-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(37,99,235,0.06), rgba(14,165,233,0.06));
+  border: 2px solid var(--border-blue);
+  border-radius: 14px;
+  padding: 24px 28px;
+}
+@media (max-width: 640px) {
+  .rev-transition-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 18px;
+  }
+}
+.rev-transition-icon {
+  font-size: 2.4rem;
+  flex-shrink: 0;
+}
+.rev-transition-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-blue-dark);
+  margin-bottom: 6px;
+}
+.rev-transition-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
 </style>
 </head>
 <body>
@@ -1648,6 +1859,7 @@ body {
         <div class="sidebar-items">
           <a href="#hero" class="sidebar-item">课件封面</a>
           <a href="#overview" class="sidebar-item">课程概览</a>
+          <a href="#intro-revolutions" class="sidebar-item">引言：科技革命</a>
         </div>
       </div>
 
@@ -1768,6 +1980,213 @@ body {
             <div class="card-body">全国14个标杆案例、贵州省案例、遵义市8个实例详解、展望建议</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ==================== INTRO: TECH REVOLUTIONS ==================== -->
+    <section id="intro-revolutions" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">✦</div>
+          <div class="section-title-wrap">
+            <h2>引言：人类科技革命的加速度</h2>
+            <p class="section-desc">从万年农耕到百年工业，从十年互联网到今天的AI——科技革命的节奏越来越快</p>
+          </div>
+        </div>
+
+        <!-- Acceleration Visual -->
+        <div class="rev-acceleration fade-in" style="margin-bottom:36px;">
+          <div class="rev-accel-title">科技革命间隔对比</div>
+          <div class="rev-accel-subtitle">每一次革命之间的时间间隔都在大幅缩短，速度呈指数级加快</div>
+          <div class="rev-accel-bars">
+            <div class="rev-accel-row">
+              <div class="rev-accel-label">农业革命 → 工业革命</div>
+              <div class="rev-accel-track"><div class="rev-accel-fill" data-width="100" style="background: linear-gradient(90deg, #86efac, #22c55e);"></div></div>
+              <div class="rev-accel-val">~10,000 年</div>
+            </div>
+            <div class="rev-accel-row">
+              <div class="rev-accel-label">第一次 → 第二次工业革命</div>
+              <div class="rev-accel-track"><div class="rev-accel-fill" data-width="10" style="background: linear-gradient(90deg, #93c5fd, #3b82f6);"></div></div>
+              <div class="rev-accel-val">~100 年</div>
+            </div>
+            <div class="rev-accel-row">
+              <div class="rev-accel-label">第二次工业革命 → 信息革命</div>
+              <div class="rev-accel-track"><div class="rev-accel-fill" data-width="6" style="background: linear-gradient(90deg, #c4b5fd, #8b5cf6);"></div></div>
+              <div class="rev-accel-val">~60 年</div>
+            </div>
+            <div class="rev-accel-row">
+              <div class="rev-accel-label">信息革命 → 互联网革命</div>
+              <div class="rev-accel-track"><div class="rev-accel-fill" data-width="2.5" style="background: linear-gradient(90deg, #fdba74, #f97316);"></div></div>
+              <div class="rev-accel-val">~25 年</div>
+            </div>
+            <div class="rev-accel-row">
+              <div class="rev-accel-label">互联网革命 → <strong>AI 革命</strong></div>
+              <div class="rev-accel-track"><div class="rev-accel-fill" data-width="1.5" style="background: linear-gradient(90deg, #fca5a5, #ef4444);"></div></div>
+              <div class="rev-accel-val"><strong>~15 年</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Revolution Timeline Cards -->
+        <div class="rev-timeline fade-in">
+          <div class="rev-card" data-rev="1">
+            <div class="rev-card-era" style="background: linear-gradient(135deg, #166534, #22c55e);">
+              <div class="rev-card-num">①</div>
+              <div class="rev-card-period">约公元前 8000 年</div>
+            </div>
+            <div class="rev-card-body">
+              <div class="rev-card-title">🌾 农业革命</div>
+              <div class="rev-card-desc">人类从"追着食物跑"变成"让食物在家门口长"。定居农耕催生了村庄、城市和文明。</div>
+              <div class="rev-card-tags">
+                <span class="rev-tag">驯化动植物</span>
+                <span class="rev-tag">定居聚落</span>
+                <span class="rev-tag">文明起源</span>
+              </div>
+              <div class="rev-card-impact">
+                <span class="rev-impact-label">影响周期</span>
+                <span class="rev-impact-val">延续近万年</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rev-card" data-rev="2">
+            <div class="rev-card-era" style="background: linear-gradient(135deg, #1e3a5f, #3b82f6);">
+              <div class="rev-card-num">②</div>
+              <div class="rev-card-period">1760s — 1840s</div>
+            </div>
+            <div class="rev-card-body">
+              <div class="rev-card-title">🏭 第一次工业革命</div>
+              <div class="rev-card-desc">蒸汽机让"人力"变成"机器力"——一台蒸汽机顶得上几十匹马。工厂取代手工作坊，英国率先起飞。</div>
+              <div class="rev-card-tags">
+                <span class="rev-tag">蒸汽动力</span>
+                <span class="rev-tag">纺织机械</span>
+                <span class="rev-tag">铁路交通</span>
+              </div>
+              <div class="rev-card-impact">
+                <span class="rev-impact-label">距上次革命</span>
+                <span class="rev-impact-val">~10,000 年</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rev-card" data-rev="3">
+            <div class="rev-card-era" style="background: linear-gradient(135deg, #1e3a5f, #6366f1);">
+              <div class="rev-card-num">③</div>
+              <div class="rev-card-period">1860s — 1920s</div>
+            </div>
+            <div class="rev-card-body">
+              <div class="rev-card-title">⚡ 第二次工业革命</div>
+              <div class="rev-card-desc">电灯点亮了黑夜，电话连通了远方，汽车替代了马车。人类进入"电气化时代"，大规模生产让商品飞入寻常百姓家。</div>
+              <div class="rev-card-tags">
+                <span class="rev-tag">电力</span>
+                <span class="rev-tag">内燃机</span>
+                <span class="rev-tag">电话电报</span>
+                <span class="rev-tag">流水线</span>
+              </div>
+              <div class="rev-card-impact">
+                <span class="rev-impact-label">距上次革命</span>
+                <span class="rev-impact-val">~100 年 ⚡ 加速</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rev-card" data-rev="4">
+            <div class="rev-card-era" style="background: linear-gradient(135deg, #4c1d95, #8b5cf6);">
+              <div class="rev-card-num">④</div>
+              <div class="rev-card-period">1940s — 1980s</div>
+            </div>
+            <div class="rev-card-body">
+              <div class="rev-card-title">💻 信息技术革命</div>
+              <div class="rev-card-desc">计算机从"一间房大"变成"一个桌面"。晶体管、集成电路让运算速度翻了亿倍，信息处理效率质的飞跃。</div>
+              <div class="rev-card-tags">
+                <span class="rev-tag">计算机</span>
+                <span class="rev-tag">晶体管</span>
+                <span class="rev-tag">集成电路</span>
+                <span class="rev-tag">个人电脑</span>
+              </div>
+              <div class="rev-card-impact">
+                <span class="rev-impact-label">距上次革命</span>
+                <span class="rev-impact-val">~60 年 ⚡⚡ 再加速</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rev-card" data-rev="5">
+            <div class="rev-card-era" style="background: linear-gradient(135deg, #9a3412, #f97316);">
+              <div class="rev-card-num">⑤</div>
+              <div class="rev-card-period">1990s — 2010s</div>
+            </div>
+            <div class="rev-card-body">
+              <div class="rev-card-title">🌐 互联网革命</div>
+              <div class="rev-card-desc">世界被一根"网线"连成了地球村。从门户网站到移动互联网，从电子邮件到智能手机，信息"秒达"成为日常。</div>
+              <div class="rev-card-tags">
+                <span class="rev-tag">万维网</span>
+                <span class="rev-tag">搜索引擎</span>
+                <span class="rev-tag">社交媒体</span>
+                <span class="rev-tag">智能手机</span>
+              </div>
+              <div class="rev-card-impact">
+                <span class="rev-impact-label">距上次革命</span>
+                <span class="rev-impact-val">~25 年 ⚡⚡⚡ 急剧加速</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rev-card rev-card-highlight" data-rev="6">
+            <div class="rev-card-era" style="background: linear-gradient(135deg, #991b1b, #ef4444);">
+              <div class="rev-card-num">⑥</div>
+              <div class="rev-card-period">2020s — 进行中</div>
+            </div>
+            <div class="rev-card-body">
+              <div class="rev-card-title">🤖 人工智能革命</div>
+              <div class="rev-card-desc">大模型让机器学会了"思考"和"创作"。AI 不只是工具升级——它正在重新定义人类与机器的关系，就像蒸汽机重新定义了人力一样。</div>
+              <div class="rev-card-tags">
+                <span class="rev-tag">大语言模型</span>
+                <span class="rev-tag">ChatGPT</span>
+                <span class="rev-tag">DeepSeek</span>
+                <span class="rev-tag">多模态AI</span>
+              </div>
+              <div class="rev-card-impact">
+                <span class="rev-impact-label">距上次革命</span>
+                <span class="rev-impact-val" style="color:#ef4444; font-weight:700;">仅 ~15 年 🚀 指数级加速！</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Insights -->
+        <div class="rev-insights fade-in" style="margin-top:36px;">
+          <div class="rev-insight-title">三个关键趋势</div>
+          <div class="cards-grid cards-grid-3">
+            <div class="card card-accent-top">
+              <div class="card-icon">⏱️</div>
+              <div class="card-title">间隔越来越短</div>
+              <div class="card-body">从万年到百年，从百年到几十年，再到十几年——革命的"预热期"在急剧压缩。等待下一次革命的时间越来越短。</div>
+            </div>
+            <div class="card card-accent-top" style="border-top-color:#f59e0b;">
+              <div class="card-icon">🔗</div>
+              <div class="card-title">技术叠加效应</div>
+              <div class="card-body">每一次革命都站在前一次的"肩膀"上。AI 革命的基础是互联网提供的海量数据、芯片提供的算力和深度学习提供的算法。</div>
+            </div>
+            <div class="card card-accent-top" style="border-top-color:#ef4444;">
+              <div class="card-icon">🏛️</div>
+              <div class="card-title">政务变革迫在眉睫</div>
+              <div class="card-body">历史上每次科技革命都深刻改变了政府治理模式。AI 革命也不例外——谁先拥抱 AI，谁就能在新一轮变革中占据先机。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transition to AI -->
+        <div class="rev-transition fade-in" style="margin-top:36px;">
+          <div class="rev-transition-box">
+            <div class="rev-transition-icon">💡</div>
+            <div class="rev-transition-text">
+              <div class="rev-transition-title">我们正站在第六次科技革命的起跑线上</div>
+              <div class="rev-transition-desc">接下来，让我们一起走进<strong>人工智能</strong>的世界——了解它是什么、它能做什么、以及它将如何改变政务工作。</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -4297,6 +4716,22 @@ const counterObs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 counterEls.forEach(el => counterObs.observe(el));
+
+/* ========================
+   Revolution Acceleration Bars
+   ======================== */
+const accelFills = document.querySelectorAll('.rev-accel-fill');
+const accelObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const target = e.target;
+      const w = target.getAttribute('data-width');
+      if (w) target.style.width = w + '%';
+      accelObs.unobserve(target);
+    }
+  });
+}, { threshold: 0.2 });
+accelFills.forEach(el => accelObs.observe(el));
 
 /* ========================
    Tabs
