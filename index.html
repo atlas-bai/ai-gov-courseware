@@ -1804,6 +1804,37 @@ body {
   color: var(--text-secondary);
   line-height: 1.7;
 }
+
+/* Xi Quotes Grid */
+.xi-quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: start;
+}
+.xi-quote-card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  background: var(--bg-card);
+}
+.xi-quote-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 600px) {
+  .xi-quotes-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .xi-quote-card {
+    border-radius: 10px;
+  }
+}
 </style>
 </head>
 <body>
@@ -2213,18 +2244,15 @@ body {
         <div class="fade-in" style="margin-top:36px;">
           <div class="rev-insight-title">🏛️ 习近平总书记关于人工智能的重要论述</div>
           <p style="text-align:center;color:var(--text-secondary);font-size:14px;margin-bottom:16px;">党中央高度重视人工智能发展，多次作出重要部署</p>
-          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
-            <div style="border-radius:14px;overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--border-light);">
-              <img src="assets/cases/xi-lunshu-0.jpg" alt="习近平总书记论人工智能（2018年）" style="width:100%;height:auto;display:block;">
+          <div class="xi-quotes-grid">
+            <div class="xi-quote-card">
+              <img src="assets/cases/xi-lunshu-0.jpg" alt="习近平总书记论人工智能（2018年）">
             </div>
-            <div style="border-radius:14px;overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--border-light);">
-              <img src="assets/cases/xi-lunshu-1.jpg" alt="习近平总书记论大数据与人工智能（2022年）" style="width:100%;height:auto;display:block;">
+            <div class="xi-quote-card">
+              <img src="assets/cases/xi-lunshu-2.jpg" alt="习近平总书记论AI科技创新（2025年4月）">
             </div>
-            <div style="border-radius:14px;overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--border-light);">
-              <img src="assets/cases/xi-lunshu-2.jpg" alt="习近平总书记论AI科技创新（2025年4月）" style="width:100%;height:auto;display:block;">
-            </div>
-            <div style="border-radius:14px;overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--border-light);">
-              <img src="assets/cases/xi-lunshu-3.jpg" alt="习近平总书记论AI国际合作（2025年4月）" style="width:100%;height:auto;display:block;">
+            <div class="xi-quote-card">
+              <img src="assets/cases/xi-lunshu-3.jpg" alt="习近平总书记论AI国际合作（2025年4月）">
             </div>
           </div>
         </div>
