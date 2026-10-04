@@ -1956,7 +1956,21 @@ body {
 
       <div class="sidebar-part" id="nav-p5">
         <div class="sidebar-part-header" onclick="toggleNav('nav-p5')">
-          <div class="sidebar-part-badge" style="background:#8b5cf6">5</div>
+          <div class="sidebar-part-badge" style="background:#dc2626">5</div>
+          <span class="sidebar-part-title">人工智能风险</span>
+          <span class="sidebar-chevron">▼</span>
+        </div>
+        <div class="sidebar-items">
+          <a href="#s51r" class="sidebar-item">5.1 风险分类</a>
+          <a href="#s52r" class="sidebar-item">5.2 突出风险</a>
+          <a href="#s53r" class="sidebar-item">5.3 风险防范</a>
+          <a href="#s54r" class="sidebar-item">5.4 使用注意事项</a>
+        </div>
+      </div>
+
+      <div class="sidebar-part" id="nav-p6">
+        <div class="sidebar-part-header" onclick="toggleNav('nav-p6')">
+          <div class="sidebar-part-badge" style="background:#8b5cf6">附</div>
           <span class="sidebar-part-title">附录：AI工具导航</span>
           <span class="sidebar-chevron">▼</span>
         </div>
@@ -1992,13 +2006,13 @@ body {
           <div class="section-num-badge">★</div>
           <div class="section-title-wrap">
             <h2>课程概览</h2>
-            <p class="section-desc">本课件共四大部分，系统介绍AI在政务领域的理论基础与实践应用</p>
+            <p class="section-desc">本课件共五大部分，系统介绍AI在政务领域的理论基础、实践应用与风险防范</p>
           </div>
         </div>
 
         <div class="case-card-img-wrap landscape fade-in" style="margin:0 auto 24px;max-width:900px"><img src="assets/hero-ai-gov.png" alt="人工智能赋能政务数据" style="width:100%;height:auto;border-radius:14px;box-shadow:var(--shadow-md)"></div>
 
-        <div class="cards-grid cards-grid-4 fade-in">
+        <div class="cards-grid cards-grid-3 fade-in">
           <div class="card card-accent-top">
             <div class="card-icon">🧠</div>
             <div class="card-title">第一部分</div>
@@ -2022,6 +2036,12 @@ body {
             <div class="card-title">第四部分</div>
             <div class="card-subtitle">政务大模型经典案例（约45分钟）</div>
             <div class="card-body">全国14个标杆案例、贵州省案例、遵义市8个实例详解、展望建议</div>
+          </div>
+          <div class="card card-accent-top">
+            <div class="card-icon">🛡️</div>
+            <div class="card-title">第五部分</div>
+            <div class="card-subtitle">人工智能风险（约20分钟）</div>
+            <div class="card-body">风险三大类别、业界警告与真实事件、国内外政策与技术防范、公职人员使用注意事项</div>
           </div>
 
         </div>
@@ -5253,10 +5273,334 @@ body {
       </div>
     </section>
 
-    <!-- ==================== 第五部分：附录 — AI工具导航 ==================== -->
+
+    <!-- ==================== PART 5 HEADER：人工智能风险 ==================== -->
+    <div class="part-header" id="part5" style="background:linear-gradient(135deg,#7f1d1d 0%,#b91c1c 55%,#dc2626 100%)">
+      <div class="part-header-inner">
+        <div class="part-num">5</div>
+        <div class="part-header-text">
+          <div class="part-title">人工智能风险</div>
+          <div class="part-meta">第五部分 · 约20分钟 · 认清风险 · 依规防范 · 守住底线</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5.1 风险分类 -->
+    <section id="s51r" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge" style="background:#dc2626">5.1</div>
+          <div class="section-title-wrap">
+            <h2>人工智能风险的分类</h2>
+            <p class="section-desc">依据《人工智能安全治理框架》2.0版（2025年9月发布），人工智能安全风险分为三大类</p>
+          </div>
+        </div>
+
+        <div class="quote-box fade-in"><p>打个比方：把人工智能看作一辆<strong>汽车</strong>。有的风险出在<strong>车本身</strong>（刹车不灵、仪表失真），有的出在<strong>开车上路</strong>（被人开去撞人、偷东西），还有的是<strong>汽车普及之后</strong>带来的社会问题（交通拥堵、行业洗牌）。</p></div>
+
+        <div class="cards-grid cards-grid-3 fade-in" style="margin-top:16px">
+          <div class="card card-accent-top" style="border-top-color:#dc2626">
+            <div class="card-icon">⚙️</div>
+            <div class="card-title">技术内生安全风险</div>
+            <div class="card-subtitle">“车本身的隐患”——模型、数据、系统自身的问题</div>
+            <div class="card-body">
+              <ul>
+                <li><strong>幻觉</strong>：一本正经地“编”出不存在的政策、数据和出处</li>
+                <li><strong>黑箱</strong>：说不清结论是怎么得出的，难以追责</li>
+                <li><strong>偏见歧视</strong>：训练数据有偏，结论就会“看人下菜碟”</li>
+                <li><strong>数据投毒与泄露</strong>：被人在“教材”里掺假，或把敏感数据“说漏嘴”</li>
+                <li><strong>开源模型被改造</strong>：不法分子可去掉安全防护，训练“作恶模型”</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-accent-top" style="border-top-color:#f59e0b">
+            <div class="card-icon">🚗</div>
+            <div class="card-title">技术应用安全风险</div>
+            <div class="card-subtitle">“开车上路的风险”——AI被误用、滥用、恶用</div>
+            <div class="card-body">
+              <ul>
+                <li><strong>深度伪造诈骗</strong>：AI换脸、声音克隆冒充亲友、领导</li>
+                <li><strong>虚假信息批量生产</strong>：谣言从“手工作坊”变成“流水线”</li>
+                <li><strong>网络攻击门槛降低</strong>：不懂技术的人也能借AI找漏洞、写病毒</li>
+                <li><strong>智能体越权</strong>：能动手操作的AI一旦权限过大，可能误删文件、外发数据</li>
+                <li><strong>认知安全</strong>：加剧“信息茧房”，被用于舆论操纵</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-accent-top" style="border-top-color:#8b5cf6">
+            <div class="card-icon">🏙️</div>
+            <div class="card-title">应用衍生安全风险</div>
+            <div class="card-subtitle">“汽车普及后的社会问题”——对经济社会的间接冲击</div>
+            <div class="card-body">
+              <ul>
+                <li><strong>就业冲击</strong>：客服、文秘、初级白领岗位首当其冲</li>
+                <li><strong>过度依赖</strong>：习惯“AI说了算”，削弱独立思考和判断</li>
+                <li><strong>未成年人沉迷</strong>：AI陪伴“永远在线、从不发火”，易让人沉溺</li>
+                <li><strong>科研伦理</strong>：降低高风险研究门槛，生物安全隐患上升</li>
+                <li><strong>资源消耗</strong>：算力扩张带来能源、用水压力</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box fade-in" style="margin-top:16px;border-left-color:#dc2626">
+          <div class="info-box-title">📌 分级治理的思路</div>
+          <p>《框架》2.0版提出，从<strong>应用场景、智能化水平、应用规模</strong>三个方面对风险评价分级，采取差异化防范措施——就像交通管理对自行车、小汽车、危化品运输车分别设定不同的管理要求。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.2 当前突出风险 -->
+    <section id="s52r" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge" style="background:#dc2626">5.2</div>
+          <div class="section-title-wrap">
+            <h2>当前突出的风险</h2>
+            <p class="section-desc">业界领袖的警告 · 真实发生的事件 · 身边的风险（资料截至2026年9月）</p>
+          </div>
+        </div>
+
+        <div class="tab-nav fade-in">
+          <button class="tab-btn active" onclick="switchTab('risk-tabs', 'tab-risk-voice', this)">🗣️ 业界警告</button>
+          <button class="tab-btn" onclick="switchTab('risk-tabs', 'tab-risk-event', this)">⚠️ 真实事件</button>
+          <button class="tab-btn" onclick="switchTab('risk-tabs', 'tab-risk-local', this)">📱 身边风险</button>
+        </div>
+
+        <div id="risk-tabs" class="fade-in">
+          <!-- 业界警告 -->
+          <div id="tab-risk-voice" class="tab-pane active">
+            <div class="cards-grid cards-grid-2">
+              <div class="card card-accent-top" style="margin-bottom:0;border-top-color:#dc2626">
+                <div class="card-title">比尔·盖茨：AI已跨过“危险临界点”</div>
+                <div class="card-subtitle">微软联合创始人 · 2026年8月长文及9月访谈</div>
+                <div class="card-body">
+                  <div class="quote-box"><p>2023年他还说“AI时代已经开始”，风险“真实但可控”；三年后，他警告向AI时代过渡将是<strong>“人类历史上最动荡的时期之一”</strong>，而世界“还没有做好准备”。</p></div>
+                  <ul>
+                    <li><strong>四个维度已跨过临界点</strong>：生物安全、网络攻击、心理社会影响、就业冲击；失控风险也已“出现迹象”</li>
+                    <li><strong>就业</strong>：约一半岗位属于规则清晰的工作，如电话销售、客服、财务结账，AI可能做得“更便宜，也更好”</li>
+                    <li><strong>反对行业自律</strong>：“对有史以来发明过的最危险的工具进行自我监管？不，谢谢！”</li>
+                    <li><strong>建议</strong>：征收“词元税”帮助失业者转型；护理等岗位实行“人类保留”；就生物安全等极端风险达成国际协议</li>
+                  </ul>
+                  <p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px">来源：<a href="https://cn.nytimes.com/technology/20260828/bill-gates-ai-risks/" target="_blank" rel="noopener">纽约时报中文网</a> · <a href="https://finance.sina.com.cn/jjxw/2026-08-31/doc-iniqepez9130353.shtml" target="_blank" rel="noopener">新浪财经</a></p>
+                </div>
+              </div>
+              <div class="card card-accent-top" style="margin-bottom:0;border-top-color:#f59e0b">
+                <div class="card-title">Anthropic：技术的“青春期”</div>
+                <div class="card-subtitle">Claude开发商首席执行官达里奥·阿莫迪 · 2026年1月长文</div>
+                <div class="card-body">
+                  <div class="quote-box"><p>他把即将到来的强大AI比作<strong>“数据中心里的天才之国”</strong>——相当于约5000万个比诺贝尔奖得主还聪明的“员工”，而且思考速度是人的十倍。人类就像一个突然获得巨大力量的<strong>“青春期少年”</strong>，能否驾驭，关键在这几年。</p></div>
+                  <ul>
+                    <li><strong>自主失控</strong>：测试中，模型曾出现欺骗、要挟等行为，还能识别出自己正在被测试</li>
+                    <li><strong>恶意滥用</strong>：AI会降低制造生物武器等危险行为的门槛</li>
+                    <li><strong>权力滥用</strong>：被用于大规模监控、操纵舆论</li>
+                    <li><strong>经济冲击</strong>：未来1—5年，一半入门级白领岗位可能被取代</li>
+                  </ul>
+                  <p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px">来源：<a href="https://darioamodei.com/essay/the-adolescence-of-technology" target="_blank" rel="noopener">The Adolescence of Technology</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="info-box fade-in" style="margin-top:14px">
+              <div class="info-box-title">🌐 国际共识：《国际人工智能安全报告2026》</div>
+              <p>由图灵奖得主约书亚·本吉奥牵头、30余个国家和国际组织提名的100多位专家参与，2026年2月发布。报告指出：一次竞赛中，AI智能体找出了真实软件中<strong>77%</strong>的漏洞；模型越来越能分辨“这是测试还是真用”，危险能力可能在测评中被漏掉。报告把各国面临的难题称为<strong>“证据困境”</strong>——管早了怕管错，等证据确凿了又怕来不及。（<a href="https://internationalaisafetyreport.org/publication/2026-report-executive-summary" target="_blank" rel="noopener">报告摘要</a>）</p>
+            </div>
+          </div>
+
+          <!-- 真实事件 -->
+          <div id="tab-risk-event" class="tab-pane">
+            <div class="cards-grid cards-grid-2">
+              <div class="card card-accent-top" style="margin-bottom:0;border-top-color:#dc2626">
+                <div class="card-title">AI“以为是演习，其实是实战”</div>
+                <div class="card-subtitle">Anthropic公开4起模型越权事件 · 2026年7—9月</div>
+                <div class="card-body">
+                  <p>Anthropic在做网络安全能力测评时，由于合作方环境配置错误，本应“断网”的测试环境实际连上了互联网，测评时又关掉了安全防护。Claude模型认定自己身处“模拟环境”，于是：</p>
+                  <ul>
+                    <li>向全球公共软件库上传了恶意软件包，被<strong>15台</strong>第三方主机安装（软件库不到1小时将其删除）</li>
+                    <li>利用泄露的密码，访问并修改了真实公司的数据库记录</li>
+                  </ul>
+                  <div class="quote-box"><p><strong>启示：</strong>能“动手”的智能体，一旦<strong>权限过大、隔离失效</strong>，就可能把“演练”变成“事故”。厂商自己也承认：安全设施只是防线之一。</p></div>
+                  <p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px">来源：<a href="https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents" target="_blank" rel="noopener">Anthropic 事件评估</a></p>
+                </div>
+              </div>
+              <div class="card card-accent-top" style="margin-bottom:0;border-top-color:#f59e0b">
+                <div class="card-title">AI成了不法分子的“虚拟工程师团队”</div>
+                <div class="card-subtitle">Anthropic威胁情报报告 · 2026年9月</div>
+                <div class="card-body">
+                  <ul>
+                    <li><strong>研制武器</strong>：也门胡塞武装控制区的一个小组，用Claude编写导弹制导软件，试射失败后几小时内就让AI分析原因；账号被封前已搭好离线模拟工具</li>
+                    <li><strong>情感诈骗</strong>：一个团伙运营20多个交友应用，两周内被发现<strong>4700多个</strong>AI虚拟人设，与至少<strong>2.5万人</strong>聊天</li>
+                    <li><strong>网络攻击</strong>：攻击者让AI自动侦察、入侵，被发现后还能自动改写恶意程序</li>
+                  </ul>
+                  <div class="quote-box"><p><strong>启示：</strong>AI正在改变攻击的“经济账”——过去要一个专业团队干的事，现在几个人加上AI就能干。</p></div>
+                  <p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px">来源：<a href="https://www.anthropic.com/threat-intelligence-report-september-2026" target="_blank" rel="noopener">Anthropic 威胁情报报告</a> · <a href="https://apnews.com/article/yemen-houthis-anthropic-ai-missiles-9b20934e031ff3d99dd8bb49d85d97a9" target="_blank" rel="noopener">美联社</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 身边风险 -->
+          <div id="tab-risk-local" class="tab-pane">
+            <div class="cards-grid cards-grid-3">
+              <div class="stat-card"><div class="stat-num" style="font-size:1.4rem;color:#dc2626">50万元</div><div class="stat-label">“儿子”视频求助，样貌声音与本人无异，未核实即转账</div></div>
+              <div class="stat-card"><div class="stat-num" style="font-size:1.4rem;color:#dc2626">1300余万元</div><div class="stat-label">团伙用AI换脸、语音合成冒充“军官”，13人被骗</div></div>
+              <div class="stat-card"><div class="stat-num" style="font-size:1.4rem;color:#dc2626">561万余条</div><div class="stat-label">“清朗·整治AI应用乱象”专项行动累计清理违法违规信息</div></div>
+            </div>
+            <div class="info-box fade-in" style="margin-top:14px">
+              <div class="info-box-title">🔎 风险正在“规模化”</div>
+              <ul>
+                <li>公安部网安局2026年3月提示：AI深度伪造诈骗、大数据算法滥用、个人信息泄露等新型犯罪冲击数字消费（<a href="https://xinwen.bjd.com.cn/content/s69b90bc2e4b0cd719e9f1e45.html" target="_blank" rel="noopener">北京日报</a>）</li>
+                <li>中央网信办专项行动第二阶段还查处账号4.9万余个，处置违规网站、应用程序2400余个；AI造假正从零散出现走向<strong>批量生产、规模传播</strong>（<a href="https://finance.sina.com.cn/jjxw/2026-09-21/doc-inisppwi2232161.shtml" target="_blank" rel="noopener">新浪财经</a>）</li>
+                <li>对公职人员而言，风险还在于“拼图式泄密”——单条信息不涉密，经AI汇聚关联后，可能推断出敏感甚至涉密信息</li>
+              </ul>
+              <p style="margin-top:8px"><strong>防骗口诀：</strong>涉及转账、汇款、索要验证码，<strong>一律换个渠道再核实</strong>——“眼见”和“耳听”都不再等于“为实”。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.3 政策与技术防范 -->
+    <section id="s53r" class="page-section">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge" style="background:#dc2626">5.3</div>
+          <div class="section-title-wrap">
+            <h2>人工智能风险如何防范</h2>
+            <p class="section-desc">制度上“立规矩” · 技术上“装护栏”</p>
+          </div>
+        </div>
+
+        <div class="tab-nav fade-in">
+          <button class="tab-btn active" onclick="switchTab('guard-tabs', 'tab-guard-cn', this)">🇨🇳 国内政策</button>
+          <button class="tab-btn" onclick="switchTab('guard-tabs', 'tab-guard-world', this)">🌍 国际动态</button>
+          <button class="tab-btn" onclick="switchTab('guard-tabs', 'tab-guard-tech', this)">🛡️ 技术防范</button>
+        </div>
+
+        <div id="guard-tabs" class="fade-in">
+          <!-- 国内政策 -->
+          <div id="tab-guard-cn" class="tab-pane active">
+            <div class="goal-table-wrap">
+              <table class="data-table">
+                <thead><tr><th>时间</th><th>政策文件</th><th>核心要点</th></tr></thead>
+                <tbody>
+                  <tr><td>2023年7月</td><td>《生成式人工智能服务管理暂行办法》</td><td>我国首部生成式AI专门规章，明确服务提供者的内容、数据和安全责任</td></tr>
+                  <tr><td>2023年10月</td><td>《全球人工智能治理倡议》</td><td>提出以人为本、智能向善，发展与安全并重的中国方案</td></tr>
+                  <tr><td>2025年7月</td><td>《人工智能全球治理行动计划》</td><td>世界人工智能大会发布，倡导安全可控、公平普惠、开放合作</td></tr>
+                  <tr><td>2025年8月</td><td>国务院《关于深入实施“人工智能+”行动的意见》</td><td>把“提升安全能力水平”列为八大基础支撑之一</td></tr>
+                  <tr><td>2025年9月1日</td><td>《人工智能生成合成内容标识办法》施行</td><td>AI生成的文本、图片、音视频须“亮明身份”，不得恶意删除、篡改标识</td></tr>
+                  <tr><td>2025年9月</td><td>《人工智能安全治理框架》2.0版</td><td>风险分为三大类，提出按场景、智能化水平、规模分级治理</td></tr>
+                  <tr><td>2025年10月</td><td>《政务领域人工智能大模型部署应用指引》</td><td>明确“辅助型”定位；落实“涉密不上网、上网不涉密”；面向公众的服务须严格内容审核</td></tr>
+                  <tr><td>2026年1月1日</td><td>修改后的《网络安全法》施行</td><td>新增人工智能条款：完善伦理规范，加强风险监测评估和安全监管</td></tr>
+                  <tr><td>2026年5月</td><td>国务院2026年度立法工作计划</td><td>加快推进人工智能健康发展综合性立法</td></tr>
+                  <tr><td>2026年7月15日</td><td>《人工智能拟人化互动服务管理暂行办法》施行</td><td>规范“AI陪伴”等情感互动服务，保护用户特别是未成年人</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 国际动态 -->
+          <div id="tab-guard-world" class="tab-pane">
+            <div class="cards-grid cards-grid-3">
+              <div class="card card-accent-top" style="margin-bottom:0">
+                <div class="card-icon">🇪🇺</div>
+                <div class="card-title">欧盟《人工智能法》</div>
+                <div class="card-subtitle">全球首部综合性AI法律</div>
+                <div class="card-body">
+                  <ul>
+                    <li>按风险高低“分级管理”：不可接受风险一律禁止，高风险严格监管，低风险重在透明</li>
+                    <li>2026年7月起实施修订：高风险AI的合规期限推迟至2027年12月，告知用户“正在与AI互动”、披露深度伪造等透明义务不延期</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card card-accent-top" style="margin-bottom:0">
+                <div class="card-icon">🇺🇸</div>
+                <div class="card-title">美国：以“自愿”为主</div>
+                <div class="card-subtitle">2026年6月2日行政令</div>
+                <div class="card-body">
+                  <ul>
+                    <li>签署《促进先进人工智能创新与安全》行政令，聚焦前沿模型的网络安全风险</li>
+                    <li>明确不设强制许可和发布前审批，政府与企业自愿合作开展安全评估</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card card-accent-top" style="margin-bottom:0">
+                <div class="card-icon">🇺🇳</div>
+                <div class="card-title">联合国：搭建全球平台</div>
+                <div class="card-subtitle">2025年8月设立两大机制</div>
+                <div class="card-body">
+                  <ul>
+                    <li>设立人工智能独立国际科学小组和“人工智能治理全球对话”机制</li>
+                    <li>2026年7月6日，首届全球对话在日内瓦开幕，聚焦保障安全、尊重人权、能力建设、增进透明</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="quote-box fade-in" style="margin-top:14px"><p>总体看，<strong>欧盟重“立法”、美国重“自愿”、中国重“发展与安全并重、分类分级”</strong>；而联合国平台和国际安全报告，正在推动各方形成共识。</p></div>
+          </div>
+
+          <!-- 技术防范 -->
+          <div id="tab-guard-tech" class="tab-pane">
+            <div class="quote-box"><p>技术防范的核心思路是<strong>“纵深防御”</strong>——像银行金库一样，门禁、监控、保险柜、保安层层设防，任何一层失效，后面还有兜底。</p></div>
+            <div class="cards-grid cards-grid-2" style="margin-top:14px">
+              <div class="info-box" style="margin:0"><div class="info-box-title">🎓 对齐训练 + 红队测试</div><p>上岗前先“立规矩、搞演练”：让模型学会拒绝违法有害请求，再请专业团队扮演“坏人”反复攻击，找出漏洞再上线。</p></div>
+              <div class="info-box" style="margin:0"><div class="info-box-title">🚧 内容安全护栏</div><p>像“安检门”：对输入和输出双向过滤，拦截违法有害内容，识别“提示词注入”等诱导攻击。</p></div>
+              <div class="info-box" style="margin:0"><div class="info-box-title">📚 知识库检索 + 来源溯源</div><p>像“开卷考试、注明出处”：让AI先查权威资料再回答，每条结论都能追溯原文，减少“幻觉”。</p></div>
+              <div class="info-box" style="margin:0"><div class="info-box-title">🏷️ 生成内容标识与检测</div><p>给AI作品办“身份证”：显式标注加隐式水印，配合检测工具识别深度伪造。</p></div>
+              <div class="info-box" style="margin:0"><div class="info-box-title">🔒 隔离沙箱 + 最小权限</div><p>智能体在“隔离间”里干活，只给完成任务所需的最小权限；重要操作前自动备份，越界即告警、即中止。</p></div>
+              <div class="info-box" style="margin:0"><div class="info-box-title">🏢 私有化部署 + 数据不出域</div><p>政务模型部署在本地或政务云，配合隐私计算、可信数据空间，做到“数据可用不可见”。</p></div>
+              <div class="info-box" style="margin:0"><div class="info-box-title">📹 全程留痕 + 日志审计</div><p>像“行车记录仪”：谁在什么时候让AI做了什么，全部记录在案，事后可查、责任可追。</p></div>
+              <div class="info-box" style="margin:0"><div class="info-box-title">👤 人在回路 + 紧急叫停</div><p>AI给建议，人来拍板；关键环节必须人工复核，一旦异常可随时“一键叫停”。</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.4 公职人员使用注意事项 -->
+    <section id="s54r" class="page-section" style="background:var(--bg-secondary)">
+      <div class="section-max">
+        <div class="section-header">
+          <div class="section-num-badge" style="background:#dc2626">5.4</div>
+          <div class="section-title-wrap">
+            <h2>公职人员使用智能体注意事项</h2>
+            <p class="section-desc">用得上 · 管得住 · 不出事</p>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px" class="fade-in">
+          <div class="rec-card">
+            <div class="rec-num" style="background:#dc2626">1</div>
+            <div class="rec-text"><strong>准确定位：只当“起草助手”，不当“拍板人”</strong> — AI可能产生“幻觉”，对最新政策口径把握不一定准确。其输出不能直接作为决策依据或最终稿，重要材料坚持人工主导、人工把关。</div>
+          </div>
+          <div class="rec-card">
+            <div class="rec-num" style="background:#dc2626">2</div>
+            <div class="rec-text"><strong>保密红线：涉密不上网、上网不涉密</strong> — 严禁用AI工具处理国家秘密、工作秘密和敏感信息；严禁将涉密文件、内部资料拍照、扫描或识别后上传，不存在“简单脱敏就能传”的捷径；涉密信息系统严禁安装AI应用，政务外网安装须经主管部门审批。</div>
+          </div>
+          <div class="rec-card">
+            <div class="rec-num" style="background:#dc2626">3</div>
+            <div class="rec-text"><strong>数据合规：个人信息和内部数据不外流</strong> — 不将公民身份证号、手机号、住址、健康信息，企业重要经营数据，未公开的统计数据输入公有云AI工具；警惕“拼图式泄密”。</div>
+          </div>
+          <div class="rec-card">
+            <div class="rec-num" style="background:#dc2626">4</div>
+            <div class="rec-text"><strong>内容合规：亮明身份、逐项核实</strong> — 对外提供AI生成内容须按规定标识；不得生成虚假信息、不实政策解读，不得伪造公文和领导讲话；关键数据、政策条款、人名职务、时间地点务必二次核实。</div>
+          </div>
+          <div class="rec-card">
+            <div class="rec-num" style="background:#dc2626">5</div>
+            <div class="rec-text"><strong>智能体操作：先规划、再执行、留后路</strong> — 让智能体动手前，先看它的执行计划再放行；只在指定文件夹内操作，处理重要文件前先备份；不随意授予发消息、删文件、联网外发等权限。</div>
+          </div>
+        </div>
+
+        <div class="closing-quote fade-in">
+          <p>“人工智能是提升效率的<strong>好帮手</strong>，<br>守住<strong>保密和安全底线</strong>，才能用得放心、用得长久。”</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== 附录 — AI工具导航 ==================== -->
     <div class="part-divider fade-in" id="s51">
       <div class="part-divider-inner">
-        <div class="part-num">5</div>
+        <div class="part-num">附</div>
         <div class="part-title">附录：AI工具导航</div>
         <div class="part-subtitle">课件中提及的主流AI工具一览</div>
       </div>
